@@ -1,0 +1,1045 @@
+[
+  {
+    "nombre": "Chaleco Airbag Alpinestars Tech-Air 5 System",
+    "precio": 699.95,
+    "descripcion": "Tech-Air® 5 es un chaleco de airbag fino e independiente que se puede llevar debajo de cualquier chaqueta* textil con el ajuste adecuado o con una chaqueta compatible con Tech-Air. Tech-Air® 5 ofrece una protección para la parte superior del cuerpo sin comparación para mantener a los motociclistas seguros cubriendo los hombros, pecho, costillas y toda la espalda. La protección de los hombros es crítica en un impacto en carretera, y los hombros están protegidos de manera única mediante el Tech-Air®, minimizando de manera efectiva y eficaz el riesgo de lesiones en el hombro y le clavícula. El Tech-Air® 5 de Alpinestars proporciona la cobertura más efectiva que cualquier airbag actualmente disponible.",
+    "categoria": "Airbags",
+    "marca": "Alpinestars",
+    "colores": ["gris"]
+  },
+  {
+    "nombre": "Chaqueta de Protección Alpinestars Tech-Air Off-Road System",
+    "precio": 999.96,
+    "descripcion": "Tech-Air® Off-Road es un sistema de airbag homologado por la FIM diseñado específicamente para soportar los rigores de la conducción en Rally y proporcionar una protección sin igual de la parte superior del cuerpo. Desarrollado y probado desde 2017 en las condiciones más duras del Rally Dakar, la carrera todoterreno más dura del mundo, el sistema Tech-Air® Off-Road ofrece la tecnología de airbag activo más avanzada para la conducción todoterreno. El sistema Tech-Air® Off-Road, con el airbag activo inflado, ofrece una protección completa de nivel 1 CE en el pecho y la espalda, además de cobertura en los hombros, el cuello y las clavículas en caso de accidente.",
+    "categoria": "Airbags",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaleco Airbag Alpinestars Tech-Air 3 System",
+    "precio": 549.95,
+    "descripcion": "El sistema de airbag autónomo más ligero de Alpinestars, el Tech-Air® 3, está diseñado para ser usado sobre o debajo la chaqueta de moto, como la opción efectiva y práctica para los pilotos de turismo, los que se desplazan por la ciudad y los aventureros ligeros de off-road.",
+    "categoria": "Airbags",
+    "marca": "Alpinestars",
+    "colores": ["amarillo-fluor", "naranja", "negro"]
+  },
+  {
+    "nombre": "Cartucho CO2 Helite Off Road 50cc",
+    "precio": 59.00,
+    "descripcion": "Cartucho CO2 de repuesto para Chaleco Helite Off Road. Cartucho de 50cc.",
+    "categoria": "Airbags",
+    "marca": "Helite",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaleco con Mangas Helite Off Road",
+    "precio": 928.99,
+    "descripcion": "Helite ha desarrollado un airbag que cumple los requisitos de los pilotos y las condiciones extremas del Off-Road.",
+    "categoria": "Airbags",
+    "marca": "Helite",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Mangas Helite Off Road",
+    "precio": 140.00,
+    "descripcion": "Mangas para Chaleco Helite Off Road. Protección: Codos y hombros SAS TEC nivel 2. Disponible en varias tallas.",
+    "categoria": "Airbags",
+    "marca": "Helite",
+    "colores": ["azul-negro"]
+  },
+  {
+    "nombre": "Chaleco sin Mangas Helite Off Road",
+    "precio": 814.99,
+    "descripcion": "Helite ha desarrollado un airbag que cumple los requisitos de los pilotos y las condiciones extremas del Off-Road.",
+    "categoria": "Airbags",
+    "marca": "Helite",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Botas Sidi Orion GTX Negro",
+    "precio": 295.99,
+    "descripcion": "Botas Sidi Orion GTXRedefine tus límites y disfruta de cada trayecto con las nuevas Sidi Orion GTX, botas diseñadas para aventureros exigentes que buscan la combinación perfecta entre tecnología avanzada, seguridad y comodidad. Estas botas destacan por su fabricación artesanal y materiales de última generación, ofreciendo protección y rendimiento en todas tus rutas, sin importar las condiciones.",
+    "categoria": "Botas",
+    "marca": "Sidi",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Botas Sidi Crossair X",
+    "precio": 556.99,
+    "descripcion": "Máximo apoyo, control y protección sin añadir peso extra. Las botas de moto Off Road Sidi Crossair X brindan un nivel excepcional de seguridad, gracias a sus protecciones contra impactos de alta densidad que cubren toda la bota. Su diseño ligero y flexible asegura funcionalidad y rendimiento. La suela, fabricada con el compuesto Materiis, ha sido específicamente desarrollada para proporcionar el control y la durabilidad requeridos en competencias de Supercross, ofreciendo un agarre inigualable para enfrentarse a cualquier circuito. En su interior, un exoesqueleto de fibra de vidrio proporciona soporte durante los saltos, mientras que el sistema de 3 puntos anti-hiperflexión protege de posibles lesiones provocadas por movimientos peligrosos.",
+    "categoria": "Botas",
+    "marca": "Sidi",
+    "colores": ["azul-verde", "blanco-negro", "negro", "azul-blanco"]
+  },
+  {
+    "nombre": "Botas Leatt Adventure HydraDri 7.5 Cortas",
+    "precio": 268.99,
+    "descripcion": "La bota ADV HydraDri® 7.5 brinda durabilidad, seguridad y un ajuste cómodo para cualquier aventura. Con una membrana HydraDri® EVO impermeable y transpirable, estas botas mantienen los pies secos incluso en el clima más húmedo. La construcción de cuero Nubuck agrega durabilidad, con un tratamiento exterior impermeabilizante adicional para protección adicional.",
+    "categoria": "Botas",
+    "marca": "Leatt",
+    "colores": ["negro", "marron"]
+  },
+  {
+    "nombre": "Botas Alpinestars SP-X Boa Drystar",
+    "precio": 359.95,
+    "descripcion": "Equipadas con innovadoras características de seguridad y protección, las botas SP-X Boa Drystar® son lo último en botas para el circuito y conducción urbana con tecnología inspirada en la competición y materiales de protección diseñados para ofrecer a los pilotos una ventaja decisiva en el circuito o para conducción urbana.",
+    "categoria": "Botas",
+    "marca": "Alpinestars",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Botas Sidi Crossfire 3 Blanco/Negro/Amarillo Fluo",
+    "precio": 399.00,
+    "descripcion": "Botas de alta gama para motocross y enduro, conocidas por su durabilidad y protección avanzada.",
+    "categoria": "Botas",
+    "marca": "Sidi",
+    "colores": ["blanco", "negro", "amarillo fluo"]
+  },
+  {
+    "nombre": "Botas Fox Motion Azul",
+    "precio": 379.99,
+    "descripcion": "Botas ligeras y flexibles, diseñadas para ofrecer comodidad y rendimiento en motocross.",
+    "categoria": "Botas",
+    "marca": "Fox",
+    "colores": ["azul"]
+  },
+  {
+    "nombre": "Botas Acerbis X-Team Negro/Blanco",
+    "precio": 156.99,
+    "descripcion": "Botas asequibles con características de alta calidad, ideales para pilotos de enduro y motocross.",
+    "categoria": "Botas",
+    "marca": "Acerbis",
+    "colores": ["negro", "blanco"]
+  },
+  {
+    "nombre": "Botas Thor Blitz XP Negro",
+    "precio": 148.25,
+    "descripcion": "Botas robustas y duraderas, perfectas para pilotos que buscan protección y comodidad.",
+    "categoria": "Botas",
+    "marca": "Thor",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Botas Sidi Adventure 2 Gore Gris",
+    "precio": 299.00,
+    "descripcion": "Botas de aventura impermeables con membrana Gore-Tex, ideales para largas travesías.",
+    "categoria": "Botas",
+    "marca": "Sidi",
+    "colores": ["gris"]
+  },
+  {
+    "nombre": "Botas Gaerne GX1 Enduro Negro",
+    "precio": 229.99,
+    "descripcion": "Botas diseñadas específicamente para enduro, ofreciendo protección y flexibilidad.",
+    "categoria": "Botas",
+    "marca": "Gaerne",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Botas Fox Comp Gris",
+    "precio": 265.99,
+    "descripcion": "Botas de nivel de entrada con características profesionales, ideales para principiantes.",
+    "categoria": "Botas",
+    "marca": "Fox",
+    "colores": ["gris"]
+  },
+  {
+    "nombre": "Botas Gaerne SG-22 Goretex Enduro Antracita",
+    "precio": 619.99,
+    "descripcion": "Botas premium con membrana Gore-Tex, ofreciendo máxima protección y confort.",
+    "categoria": "Botas",
+    "marca": "Gaerne",
+    "colores": ["antracita"]
+  },
+  {
+    "nombre": "Botas Gaerne GX1 Evo Amarillo/Negro",
+    "precio": 229.99,
+    "descripcion": "Botas evolucionadas para ofrecer mayor resistencia y estilo en pistas de motocross.",
+    "categoria": "Botas",
+    "marca": "Gaerne",
+    "colores": ["amarillo", "negro"]
+  },
+  {
+    "nombre": "Botas Acerbis X-Team Gris/Amarillo",
+    "precio": 156.99,
+    "descripcion": "Botas con diseño moderno y protección adecuada para pilotos de todos los niveles.",
+    "categoria": "Botas",
+    "marca": "Acerbis",
+    "colores": ["gris", "amarillo"]
+  },
+  {
+    "nombre": "Botas Seventy Degrees SD-BA4 Adventure Negro",
+    "precio": 126.94,
+    "descripcion": "Botas de aventura con excelente relación calidad-precio, ideales para rutas largas.",
+    "categoria": "Botas",
+    "marca": "Seventy Degrees",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Botas Fox Motion Barbed Wire SE Negro",
+    "precio": 329.99,
+    "descripcion": "Edición especial de las botas Fox Motion, con diseño exclusivo y características mejoradas.",
+    "categoria": "Botas",
+    "marca": "Fox",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Botas Gaerne Fastback Endurance Naranja/Blanco",
+    "precio": 322.99,
+    "descripcion": "Botas diseñadas para resistencia y durabilidad en condiciones extremas de enduro.",
+    "categoria": "Botas",
+    "marca": "Gaerne",
+    "colores": ["naranja", "blanco"]
+  },
+  {
+    "nombre": "Botas Leatt 3.5 Naranja",
+    "precio": 158.99,
+    "descripcion": "Botas ligeras y asequibles, ofreciendo protección básica para pilotos principiantes.",
+    "categoria": "Botas",
+    "marca": "Leatt",
+    "colores": ["naranja"]
+  },
+  {
+    "nombre": "Botas Leatt 3.5 Negro",
+    "precio": 158.99,
+    "descripcion": "Versión en negro de las botas Leatt 3.5, combinando estilo y funcionalidad.",
+    "categoria": "Botas",
+    "marca": "Leatt",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Botas Acerbis X-Team Azul/Gris",
+    "precio": 156.99,
+    "descripcion": "Botas con combinación de colores vibrantes y características de seguridad esenciales.",
+    "categoria": "Botas",
+    "marca": "Acerbis",
+    "colores": ["azul", "gris"]
+  },
+  {
+    "nombre": "Botas Fox Comp Blanco",
+    "precio": 265.99,
+    "descripcion": "Botas diseñadas para ofrecer comodidad y protección en pistas de motocross.",
+    "categoria": "Botas",
+    "marca": "Fox",
+    "colores": ["blanco"]
+  },
+  {
+    "nombre": "Botas Acerbis X-Race Azul/Gris",
+    "precio": 169.99,
+    "descripcion": "Botas con diseño agresivo y características técnicas para pilotos exigentes.",
+    "categoria": "Botas",
+    "marca": "Acerbis",
+    "colores": ["azul", "gris"]
+  },
+  {
+    "nombre": "Botas Gaerne SG12 Blanco",
+    "precio": 475.99,
+    "descripcion": "Botas de alta gama reconocidas por su excepcional protección y comodidad.",
+    "categoria": "Botas",
+    "marca": "Gaerne",
+    "colores": ["blanco"]
+  },
+  {
+    "nombre": "Casco Fox V1 Matte Black",
+    "precio": 189.99,
+    "descripcion": "Casco ligero y aerodinámico con excelente ventilación y seguridad certificada.",
+    "categoria": "Cascos",
+    "marca": "Fox",
+    "colores": ["negro mate"]
+  },
+  {
+    "nombre": "Casco Airoh Aviator 3 Rampage Azul/Rojo",
+    "precio": 599.00,
+    "descripcion": "Casco de motocross premium con tecnología avanzada y máxima protección.",
+    "categoria": "Cascos",
+    "marca": "Airoh",
+    "colores": ["azul", "rojo"]
+  },
+  {
+    "nombre": "Casco Shoei VFX-WR Blanco",
+    "precio": 599.99,
+    "descripcion": "Casco de alto rendimiento con diseño aerodinámico y excelente absorción de impactos.",
+    "categoria": "Cascos",
+    "marca": "Shoei",
+    "colores": ["blanco"]
+  },
+  {
+    "nombre": "Casco Thor Sector Blackout Negro",
+    "precio": 139.99,
+    "descripcion": "Casco accesible con características de seguridad y confort para motocross.",
+    "categoria": "Cascos",
+    "marca": "Thor",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Casco Airoh Wraap Broken Negro/Rojo",
+    "precio": 149.00,
+    "descripcion": "Casco con diseño agresivo y materiales de alta calidad para enduro y motocross.",
+    "categoria": "Cascos",
+    "marca": "Airoh",
+    "colores": ["negro", "rojo"]
+  },
+  {
+    "nombre": "Casco Bell Moto-9 MIPS Fasthouse",
+    "precio": 549.99,
+    "descripcion": "Casco premium con tecnología MIPS para una protección superior contra impactos rotacionales.",
+    "categoria": "Cascos",
+    "marca": "Bell",
+    "colores": ["negro", "gris", "rojo"]
+  },
+  {
+    "nombre": "Casco Leatt 7.5 V22 Negro/Rojo",
+    "precio": 379.99,
+    "descripcion": "Casco con sistema 360° Turbine para absorción de impactos y reducción de fuerzas rotacionales.",
+    "categoria": "Cascos",
+    "marca": "Leatt",
+    "colores": ["negro", "rojo"]
+  },
+  {
+    "nombre": "Casco Fox V3 RS Idol Rojo/Negro",
+    "precio": 569.99,
+    "descripcion": "Casco de motocross de competición con visor magnético y tecnología MIPS.",
+    "categoria": "Cascos",
+    "marca": "Fox",
+    "colores": ["rojo", "negro"]
+  },
+  {
+    "nombre": "Casco Just1 J18 Mips Stroke Azul/Amarillo",
+    "precio": 259.99,
+    "descripcion": "Casco con estructura de fibra de carbono y tecnología MIPS para máxima protección.",
+    "categoria": "Cascos",
+    "marca": "Just1",
+    "colores": ["azul", "amarillo"]
+  },
+  {
+    "nombre": "Casco LS2 Subverter Evo EvoX Negro/Verde",
+    "precio": 209.99,
+    "descripcion": "Casco con diseño innovador y sistema de ventilación avanzada para alto rendimiento.",
+    "categoria": "Cascos",
+    "marca": "LS2",
+    "colores": ["negro", "verde"]
+  },
+  {
+    "nombre": "Casco Alpinestars Supertech M10 Carbono",
+    "precio": 629.99,
+    "descripcion": "Casco de carbono ultra ligero con sistema MIPS y EPS de densidad múltiple.",
+    "categoria": "Cascos",
+    "marca": "Alpinestars",
+    "colores": ["carbono", "negro"]
+  },
+  {
+    "nombre": "Casco Airoh Aviator Ace Slash Azul/Naranja",
+    "precio": 479.00,
+    "descripcion": "Casco de competición con calota de fibra HPC y tecnología avanzada de seguridad.",
+    "categoria": "Cascos",
+    "marca": "Airoh",
+    "colores": ["azul", "naranja"]
+  },
+  {
+    "nombre": "Casco Shoei Hornet ADV Blanco",
+    "precio": 649.99,
+    "descripcion": "Casco de aventura con gran aerodinámica y visor ampliado para mejor visibilidad.",
+    "categoria": "Cascos",
+    "marca": "Shoei",
+    "colores": ["blanco"]
+  },
+  {
+    "nombre": "Casco Fox V1 Lux Azul/Negro",
+    "precio": 189.99,
+    "descripcion": "Casco de motocross con tecnología MIPS y excelente ventilación.",
+    "categoria": "Cascos",
+    "marca": "Fox",
+    "colores": ["azul", "negro"]
+  },
+  {
+    "nombre": "Casco LS2 Explorer Carbono Mate",
+    "precio": 429.99,
+    "descripcion": "Casco adventure premium con calota de carbono y visor solar integrado.",
+    "categoria": "Cascos",
+    "marca": "LS2",
+    "colores": ["carbono mate"]
+  },
+  {
+    "nombre": "Casco Alpinestars S-M8 Tripod Blanco/Negro",
+    "precio": 519.99,
+    "descripcion": "Casco de competición ligero con sistema MIPS y diseño ergonómico.",
+    "categoria": "Cascos",
+    "marca": "Alpinestars",
+    "colores": ["blanco", "negro"]
+  },
+  {
+    "nombre": "Casco Just1 J12 Dominator Carbono/Azul",
+    "precio": 499.99,
+    "descripcion": "Casco fabricado en carbono con certificación ECE para máxima seguridad.",
+    "categoria": "Cascos",
+    "marca": "Just1",
+    "colores": ["carbono", "azul"]
+  },
+  {
+    "nombre": "Casco Shoei GT-Air II Negro Mate",
+    "precio": 549.99,
+    "descripcion": "Casco sport-touring con visor solar y sistema de ventilación avanzado.",
+    "categoria": "Cascos",
+    "marca": "Shoei",
+    "colores": ["negro mate"]
+  },
+  {
+    "nombre": "Casco Thor Reflex Divide Rojo/Blanco",
+    "precio": 349.99,
+    "descripcion": "Casco con carcasa compuesta y tecnología de absorción de impactos MIPS.",
+    "categoria": "Cascos",
+    "marca": "Thor",
+    "colores": ["rojo", "blanco"]
+  },
+  {
+    "nombre": "Casco Scorpion EXO-R1 Air Negro Mate",
+    "precio": 379.99,
+    "descripcion": "Casco de competición aerodinámico con sistema de ajuste de inflado AirFit.",
+    "categoria": "Cascos",
+    "marca": "Scorpion",
+    "colores": ["negro mate"]
+  },
+  {
+    "nombre": "Casco Leatt 9.5 Carbono",
+    "precio": 649.99,
+    "descripcion": "Casco ultra ligero de carbono con tecnología 360° Turbine y EPS de múltiples densidades.",
+    "categoria": "Cascos",
+    "marca": "Leatt",
+    "colores": ["carbono"]
+  },
+  {
+    "nombre": "Chaqueta Alpinestars Andes V3 Drystar Negro",
+    "precio": 229.95,
+    "descripcion": "Chaqueta touring impermeable con membrana Drystar y forro térmico extraíble.",
+    "categoria": "Chaquetas",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta Dainese Carve Master 2 Gore-Tex Negro/Gris",
+    "precio": 599.95,
+    "descripcion": "Chaqueta sport-touring con membrana Gore-Tex y protecciones compuestas.",
+    "categoria": "Chaquetas",
+    "marca": "Dainese",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Chaqueta Rev'it Sand 4 H2O Negro",
+    "precio": 449.99,
+    "descripcion": "Chaqueta adventure con forro impermeable Hydratex y ventilación VCS.",
+    "categoria": "Chaquetas",
+    "marca": "Rev'it",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta Klim Latitude Negro",
+    "precio": 699.99,
+    "descripcion": "Chaqueta touring premium con membrana Gore-Tex y ventilaciones ajustables.",
+    "categoria": "Chaquetas",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta Spidi 4Season H2Out Negro/Gris",
+    "precio": 399.90,
+    "descripcion": "Chaqueta modular con membrana impermeable H2Out y forro térmico extraíble.",
+    "categoria": "Chaquetas",
+    "marca": "Spidi",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Chaqueta Held Carese Evo Gore-Tex Negro",
+    "precio": 599.95,
+    "descripcion": "Chaqueta adventure con membrana Gore-Tex y amplias opciones de ventilación.",
+    "categoria": "Chaquetas",
+    "marca": "Held",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta Rukka R-EX Gore-Tex Negro",
+    "precio": 699.00,
+    "descripcion": "Chaqueta touring con membrana Gore-Tex y protecciones D3O Air.",
+    "categoria": "Chaquetas",
+    "marca": "Rukka",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta Icon Raiden DKR Gris",
+    "precio": 395.00,
+    "descripcion": "Chaqueta adventure impermeable con ventilaciones estratégicas y diseño robusto.",
+    "categoria": "Chaquetas",
+    "marca": "Icon",
+    "colores": ["gris"]
+  },
+  {
+    "nombre": "Chaqueta BMW Rallye Pro Azul",
+    "precio": 950.00,
+    "descripcion": "Chaqueta adventure de alta gama con ventilación optimizada y materiales resistentes.",
+    "categoria": "Chaquetas",
+    "marca": "BMW",
+    "colores": ["azul"]
+  },
+  {
+    "nombre": "Chaqueta Alpinestars T-SP S WP Negro/Rojo",
+    "precio": 199.95,
+    "descripcion": "Chaqueta sport impermeable con forro térmico extraíble y protecciones Nucleon Flex Plus.",
+    "categoria": "Chaquetas",
+    "marca": "Alpinestars",
+    "colores": ["negro", "rojo"]
+  },
+  {
+    "nombre": "Chaqueta Dainese Tempest 3 D-Dry Negro/Amarillo Fluo",
+    "precio": 379.95,
+    "descripcion": "Chaqueta touring con membrana D-Dry impermeable y forro térmico extraíble.",
+    "categoria": "Chaquetas",
+    "marca": "Dainese",
+    "colores": ["negro", "amarillo fluo"]
+  },
+  {
+    "nombre": "Chaqueta Rev'it Offtrack 2 H2O Arena/Negro",
+    "precio": 399.99,
+    "descripcion": "Chaqueta adventure ligera con membrana impermeable y ventilaciones amplias.",
+    "categoria": "Chaquetas",
+    "marca": "Rev'it",
+    "colores": ["arena", "negro"]
+  },
+  {
+    "nombre": "Chaqueta Klim Badlands Pro A3 Negro",
+    "precio": 1499.99,
+    "descripcion": "Chaqueta adventure de alta resistencia con certificación CE AAA y membrana Gore-Tex Pro.",
+    "categoria": "Chaquetas",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta Spidi Traveler 3 H2Out Negro/Gris",
+    "precio": 299.90,
+    "descripcion": "Chaqueta touring impermeable con forro térmico extraíble y ventilaciones dinámicas.",
+    "categoria": "Chaquetas",
+    "marca": "Spidi",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Chaqueta Held Torno II Gore-Tex Negro",
+    "precio": 499.95,
+    "descripcion": "Chaqueta touring con membrana Gore-Tex extraíble y ventilaciones eficientes.",
+    "categoria": "Chaquetas",
+    "marca": "Held",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta Rukka Exegal Gore-Tex Negro/Amarillo",
+    "precio": 1199.00,
+    "descripcion": "Chaqueta touring premium con membrana Gore-Tex Pro y protecciones Rukka D3O Air.",
+    "categoria": "Chaquetas",
+    "marca": "Rukka",
+    "colores": ["negro", "amarillo"]
+  },
+  {
+    "nombre": "Chaqueta Icon Stormhawk Negro",
+    "precio": 295.00,
+    "descripcion": "Chaqueta impermeable con diseño urbano y protecciones D3O integradas.",
+    "categoria": "Chaquetas",
+    "marca": "Icon",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Chaqueta BMW GS Dry Gris",
+    "precio": 650.00,
+    "descripcion": "Chaqueta adventure impermeable con ventilación efectiva y diseño ergonómico.",
+    "categoria": "Chaquetas",
+    "marca": "BMW",
+    "colores": ["gris"]
+  },
+  {
+    "nombre": "Chaqueta Alpinestars Vence Drystar Negro/Gris",
+    "precio": 399.95,
+    "descripcion": "Chaqueta touring con membrana Drystar y múltiples opciones de ajuste.",
+    "categoria": "Chaquetas",
+    "marca": "Alpinestars",
+    "colores": [
+      "negro",
+      "gris"
+    ]
+  },
+  {
+    "nombre": "Guantes Alpinestars SMX-2 Air Carbon V2 Negro",
+    "precio": 89.95,
+    "descripcion": "Guantes cortos con protección de carbono y malla ventilada para mayor transpirabilidad.",
+    "categoria": "Guantes",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Dainese Carbon 4 Short Negro/Blanco",
+    "precio": 109.95,
+    "descripcion": "Guantes deportivos cortos con protecciones de carbono y cuero de alta resistencia.",
+    "categoria": "Guantes",
+    "marca": "Dainese",
+    "colores": ["negro", "blanco"]
+  },
+  {
+    "nombre": "Guantes Rev'it Sand 4 H2O Negro",
+    "precio": 129.99,
+    "descripcion": "Guantes adventure impermeables con forro térmico desmontable y protecciones rígidas.",
+    "categoria": "Guantes",
+    "marca": "Rev'it",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Klim Adventure GTX Negro",
+    "precio": 189.99,
+    "descripcion": "Guantes touring premium con membrana Gore-Tex y protecciones de carbono.",
+    "categoria": "Guantes",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Spidi STR-5 Negro/Rojo",
+    "precio": 129.90,
+    "descripcion": "Guantes racing con protección de nudillos de carbono y cuero de alta calidad.",
+    "categoria": "Guantes",
+    "marca": "Spidi",
+    "colores": ["negro", "rojo"]
+  },
+  {
+    "nombre": "Guantes Held Air N Dry Negro/Gris",
+    "precio": 229.95,
+    "descripcion": "Guantes touring de doble cámara con opción de ventilación y membrana impermeable.",
+    "categoria": "Guantes",
+    "marca": "Held",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Guantes Rukka Virium Gore-Tex Negro",
+    "precio": 169.00,
+    "descripcion": "Guantes touring con membrana Gore-Tex, tecnología táctil y refuerzos en la palma.",
+    "categoria": "Guantes",
+    "marca": "Rukka",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Icon Anthem 2 Negro",
+    "precio": 45.00,
+    "descripcion": "Guantes cortos ligeros con tejido elástico y refuerzos en la palma.",
+    "categoria": "Guantes",
+    "marca": "Icon",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes BMW GS Rallye Pro Azul",
+    "precio": 149.00,
+    "descripcion": "Guantes adventure con protección rígida y materiales resistentes a la abrasión.",
+    "categoria": "Guantes",
+    "marca": "BMW",
+    "colores": ["azul"]
+  },
+  {
+    "nombre": "Guantes Alpinestars SP-8 V3 Negro/Blanco",
+    "precio": 99.95,
+    "descripcion": "Guantes deportivos con cuero de plena flor y protección de nudillos de carbono.",
+    "categoria": "Guantes",
+    "marca": "Alpinestars",
+    "colores": ["negro", "blanco"]
+  },
+  {
+    "nombre": "Guantes Dainese Tempest D-Dry Negro/Amarillo Fluo",
+    "precio": 89.95,
+    "descripcion": "Guantes touring impermeables con forro térmico y protección de nudillos rígida.",
+    "categoria": "Guantes",
+    "marca": "Dainese",
+    "colores": ["negro", "amarillo fluo"]
+  },
+  {
+    "nombre": "Guantes Rev'it Dominator 3 GTX Negro",
+    "precio": 199.99,
+    "descripcion": "Guantes de aventura con membrana Gore-Tex y refuerzos de TPU en la palma.",
+    "categoria": "Guantes",
+    "marca": "Rev'it",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Klim Badlands Aero Pro Negro",
+    "precio": 249.99,
+    "descripcion": "Guantes adventure de alto rendimiento con protecciones de carbono y ventilación eficiente.",
+    "categoria": "Guantes",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Spidi Carbo Track EVO Negro/Rojo",
+    "precio": 299.90,
+    "descripcion": "Guantes racing con cuero de canguro y protecciones de carbono de nivel profesional.",
+    "categoria": "Guantes",
+    "marca": "Spidi",
+    "colores": ["negro", "rojo"]
+  },
+  {
+    "nombre": "Guantes Held Phantom II Negro",
+    "precio": 279.95,
+    "descripcion": "Guantes deportivos de competición con cuero de canguro y protección de carbono.",
+    "categoria": "Guantes",
+    "marca": "Held",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Rukka Apollo 2 Gore-Tex Negro",
+    "precio": 219.00,
+    "descripcion": "Guantes touring con Gore-Tex X-Trafit para impermeabilidad y transpirabilidad óptima.",
+    "categoria": "Guantes",
+    "marca": "Rukka",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Icon Superduty 3 Marrón",
+    "precio": 65.00,
+    "descripcion": "Guantes urbanos reforzados con diseño ergonómico y ajuste flexible.",
+    "categoria": "Guantes",
+    "marca": "Icon",
+    "colores": ["marrón"]
+  },
+  {
+    "nombre": "Guantes BMW ProRace Negro",
+    "precio": 199.00,
+    "descripcion": "Guantes deportivos con ajuste ceñido y refuerzos de seguridad en palma y nudillos.",
+    "categoria": "Guantes",
+    "marca": "BMW",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Alpinestars WR-1 V2 Gore-Tex Negro",
+    "precio": 149.95,
+    "descripcion": "Guantes touring de invierno con forro térmico Primaloft y membrana Gore-Tex.",
+    "categoria": "Guantes",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Guantes Dainese Scout 2 Gore-Tex Negro/Gris",
+    "precio": 169.95,
+    "descripcion": "Guantes touring con aislamiento térmico y membrana Gore-Tex transpirable.",
+    "categoria": "Guantes",
+    "marca": "Dainese",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Pantalón Alpinestars Andes V3 Drystar Negro",
+    "precio": 229.95,
+    "descripcion": "Pantalón touring impermeable con membrana Drystar y forro térmico desmontable.",
+    "categoria": "Pantalones",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Dainese Tempest 3 D-Dry Negro/Gris",
+    "precio": 249.95,
+    "descripcion": "Pantalón touring con membrana D-Dry, protecciones certificadas y forro térmico.",
+    "categoria": "Pantalones",
+    "marca": "Dainese",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Pantalón Rev'it Sand 4 H2O Negro",
+    "precio": 299.99,
+    "descripcion": "Pantalón adventure impermeable con forro térmico desmontable y ventilaciones ajustables.",
+    "categoria": "Pantalones",
+    "marca": "Rev'it",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Klim Badlands Pro Negro",
+    "precio": 799.99,
+    "descripcion": "Pantalón adventure premium con Gore-Tex y refuerzos de cuero para máxima protección.",
+    "categoria": "Pantalones",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Spidi Superstorm H2Out Negro",
+    "precio": 119.90,
+    "descripcion": "Pantalón impermeable sobrepantalón con membrana H2Out y ajuste rápido.",
+    "categoria": "Pantalones",
+    "marca": "Spidi",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Held Torno II Negro/Gris",
+    "precio": 349.95,
+    "descripcion": "Pantalón touring con sistema de ventilación y protecciones extraíbles en rodillas.",
+    "categoria": "Pantalones",
+    "marca": "Held",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Pantalón Rukka R.O.R Gore-Tex Negro",
+    "precio": 599.00,
+    "descripcion": "Pantalón touring con membrana Gore-Tex, ajuste ergonómico y protecciones de alta gama.",
+    "categoria": "Pantalones",
+    "marca": "Rukka",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Icon Raiden DKR Gris",
+    "precio": 250.00,
+    "descripcion": "Pantalón adventure con diseño ergonómico, ventilación y refuerzos de seguridad.",
+    "categoria": "Pantalones",
+    "marca": "Icon",
+    "colores": ["gris"]
+  },
+  {
+    "nombre": "Pantalón BMW Rallye Pro Azul/Negro",
+    "precio": 499.00,
+    "descripcion": "Pantalón adventure con protecciones CE y refuerzos de material resistente a la abrasión.",
+    "categoria": "Pantalones",
+    "marca": "BMW",
+    "colores": ["azul", "negro"]
+  },
+  {
+    "nombre": "Pantalón Alpinestars AMT-10R Drystar XF Negro",
+    "precio": 499.95,
+    "descripcion": "Pantalón touring con material técnico laminado y paneles de ventilación ajustables.",
+    "categoria": "Pantalones",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Dainese Tonale D-Dry Negro",
+    "precio": 299.95,
+    "descripcion": "Pantalón touring impermeable con inserciones elásticas y protecciones Pro-Armor.",
+    "categoria": "Pantalones",
+    "marca": "Dainese",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Rev'it Dominator 3 GTX Negro",
+    "precio": 649.99,
+    "descripcion": "Pantalón de aventura con membrana Gore-Tex laminada y protecciones de alto nivel.",
+    "categoria": "Pantalones",
+    "marca": "Rev'it",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Klim Traverse Negro",
+    "precio": 499.99,
+    "descripcion": "Pantalón off-road con Gore-Tex, alta resistencia y ajuste optimizado para enduro.",
+    "categoria": "Pantalones",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Spidi Defender H2Out Negro",
+    "precio": 269.90,
+    "descripcion": "Pantalón touring impermeable con refuerzos de seguridad y ajuste ergonómico.",
+    "categoria": "Pantalones",
+    "marca": "Spidi",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Held Avolo 3 Negro",
+    "precio": 229.95,
+    "descripcion": "Pantalón touring con protecciones en rodillas y caderas, y ajuste cómodo.",
+    "categoria": "Pantalones",
+    "marca": "Held",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Rukka Kalix 2.0 Gore-Tex Negro",
+    "precio": 399.00,
+    "descripcion": "Pantalón touring con Gore-Tex laminado y protecciones D3O en rodillas y caderas.",
+    "categoria": "Pantalones",
+    "marca": "Rukka",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Icon Contra 2 Azul",
+    "precio": 175.00,
+    "descripcion": "Pantalón urbano reforzado con materiales resistentes y protecciones de rodilla.",
+    "categoria": "Pantalones",
+    "marca": "Icon",
+    "colores": ["azul"]
+  },
+  {
+    "nombre": "Pantalón BMW ProRace Negro",
+    "precio": 349.00,
+    "descripcion": "Pantalón deportivo con ajuste ceñido y protecciones de alto nivel para circuito.",
+    "categoria": "Pantalones",
+    "marca": "BMW",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Alpinestars Raider V2 Drystar Negro",
+    "precio": 199.95,
+    "descripcion": "Pantalón touring impermeable con diseño ergonómico y protecciones de rodilla CE.",
+    "categoria": "Pantalones",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Pantalón Dainese Drake Air D1 Negro",
+    "precio": 199.95,
+    "descripcion": "Pantalón deportivo ventilado con refuerzos de seguridad y ajuste deportivo.",
+    "categoria": "Pantalones",
+    "marca": "Dainese",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Alpinestars Bogotá Pro Drystar Negro/Gris",
+    "precio": 799.95,
+    "descripcion": "Traje touring impermeable con membrana Drystar, ventilación avanzada y forro térmico desmontable.",
+    "categoria": "Trajes completos",
+    "marca": "Alpinestars",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Traje Dainese Antartica 2 Gore-Tex Negro/Gris",
+    "precio": 1799.95,
+    "descripcion": "Traje adventure premium con membrana Gore-Tex, aislamiento térmico y protecciones Pro-Armor.",
+    "categoria": "Trajes completos",
+    "marca": "Dainese",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Traje Rev'it Dominator GTX Negro/Gris",
+    "precio": 1699.99,
+    "descripcion": "Traje touring de alta gama con Gore-Tex laminado, ventilación adaptable y protecciones Seeflex.",
+    "categoria": "Trajes completos",
+    "marca": "Rev'it",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Traje Klim Badlands Pro A3 Negro",
+    "precio": 2499.99,
+    "descripcion": "Traje adventure extremo con Gore-Tex 3 capas, refuerzos de Superfabric y certificación CE AAA.",
+    "categoria": "Trajes completos",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Spidi 4Season H2Out Negro",
+    "precio": 999.90,
+    "descripcion": "Traje touring versátil con membrana impermeable desmontable y forro térmico extraíble.",
+    "categoria": "Trajes completos",
+    "marca": "Spidi",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Held Carese Evo Gore-Tex Negro/Gris",
+    "precio": 1299.95,
+    "descripcion": "Traje touring con Gore-Tex extraíble, ventilaciones grandes y protecciones SAS-TEC.",
+    "categoria": "Trajes completos",
+    "marca": "Held",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Traje Rukka R-EX Gore-Tex Negro",
+    "precio": 1299.00,
+    "descripcion": "Traje touring resistente con Gore-Tex laminado, protecciones D3O y refuerzos en codos y rodillas.",
+    "categoria": "Trajes completos",
+    "marca": "Rukka",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Icon Raiden DKR Azul",
+    "precio": 850.00,
+    "descripcion": "Traje adventure con diseño ergonómico, impermeabilidad avanzada y refuerzos de seguridad.",
+    "categoria": "Trajes completos",
+    "marca": "Icon",
+    "colores": ["azul"]
+  },
+  {
+    "nombre": "Traje BMW EnduroGuard Negro/Gris",
+    "precio": 1899.00,
+    "descripcion": "Traje adventure con material impermeable Schoeller y protecciones NP2 avanzadas.",
+    "categoria": "Trajes completos",
+    "marca": "BMW",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Traje Alpinestars AMT-10 Drystar XF Negro",
+    "precio": 1599.95,
+    "descripcion": "Traje touring avanzado con ventilación adaptable, ajuste modular y protecciones Nucleon Flex Pro.",
+    "categoria": "Trajes completos",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Dainese D-Explorer 2 Gore-Tex Negro/Gris",
+    "precio": 1399.95,
+    "descripcion": "Traje adventure con membrana Gore-Tex extraíble, ventilaciones ajustables y protecciones Pro-Armor.",
+    "categoria": "Trajes completos",
+    "marca": "Dainese",
+    "colores": ["negro", "gris"]
+  },
+  {
+    "nombre": "Traje Rev'it Sand 4 H2O Negro",
+    "precio": 1199.99,
+    "descripcion": "Traje adventure con membrana impermeable, ventilación avanzada y protecciones Seeflex CE.",
+    "categoria": "Trajes completos",
+    "marca": "Rev'it",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Klim Traverse Negro",
+    "precio": 999.99,
+    "descripcion": "Traje off-road con Gore-Tex laminado, diseño ligero y refuerzos de alta resistencia.",
+    "categoria": "Trajes completos",
+    "marca": "Klim",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Spidi Globetracker H2Out Negro",
+    "precio": 1199.90,
+    "descripcion": "Traje touring impermeable con ventilación adaptable y protecciones Force-Tech.",
+    "categoria": "Trajes completos",
+    "marca": "Spidi",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Held Hakuna II & Matata II Negro",
+    "precio": 1099.95,
+    "descripcion": "Traje adventure con membrana Gore-Tex extraíble y ventilaciones amplias para climas extremos.",
+    "categoria": "Trajes completos",
+    "marca": "Held",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Rukka Kalix 2.0 Gore-Tex Negro",
+    "precio": 1099.00,
+    "descripcion": "Traje touring con Gore-Tex laminado, protecciones D3O y diseño ergonómico de alto confort.",
+    "categoria": "Trajes completos",
+    "marca": "Rukka",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Icon Stormhawk Negro",
+    "precio": 650.00,
+    "descripcion": "Traje touring urbano con membrana impermeable y refuerzos en zonas de impacto.",
+    "categoria": "Trajes completos",
+    "marca": "Icon",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje BMW Rallye Pro Azul/Negro",
+    "precio": 1599.00,
+    "descripcion": "Traje adventure con refuerzos de material Cordura y protecciones de alto nivel.",
+    "categoria": "Trajes completos",
+    "marca": "BMW",
+    "colores": ["azul", "negro"]
+  },
+  {
+    "nombre": "Traje Alpinestars Raider V2 Drystar Negro",
+    "precio": 899.95,
+    "descripcion": "Traje touring impermeable con ajuste ergonómico y protecciones de rodilla CE.",
+    "categoria": "Trajes completos",
+    "marca": "Alpinestars",
+    "colores": ["negro"]
+  },
+  {
+    "nombre": "Traje Dainese Carve Master 3 Gore-Tex Negro",
+    "precio": 1299.95,
+    "descripcion": "Traje sport-touring con membrana Gore-Tex, ajuste deportivo y protecciones rígidas.",
+    "categoria": "Trajes completos",
+    "marca": "Dainese",
+    "colores": ["negro"]
+  }
+]
