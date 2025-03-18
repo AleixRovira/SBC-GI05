@@ -7,7 +7,7 @@ class Replacement:
 
     def extract_filters(self):
         categories = {"airbag", "glove", "pants", "jacket", "boot", "full suit", "helmet"}
-        brands = {"Scorpion", "Sidi", "Spidi", "IXS", "Bell", "Schuberth", "Gaerne", "Held", "Dainese", "Modeka", "TCX", "Rukka", "Nolan", "Alpinestars", "Shoei", "RST", "Furygan", "Shark", "X-Lite", "LS2", "Klim", "Forma", "Macna", "AGV", "Revit", "Roviron", "Bering", "Icon", "Arai", "HJC"}
+        brands = {"scorpion", "sidi", "spidi", "ixs", "bell", "schuberth", "gaerne", "held", "dainese", "modeka", "tcx", "rukka", "nolan", "alpinestars", "shoei", "rst", "furygan", "shark", "x-lite", "ls2", "klim", "forma", "macna", "agv", "revit", "roviron", "bering", "icon", "arai", "hjc"}
         colors = {"red", "blue", "green", "black", "white", "yellow", "orange", "purple", "pink", "gray", "brown"}
 
         category = next((word for word in self.token_list if word.lower() in categories), None)
@@ -56,6 +56,6 @@ class Replacement:
         if filtered_products:
             print("Products:")
             for p in filtered_products:
-                print(f"{p.name} - ${p.price} - {p.colors}")
+                print(f"{p.name} - ${p.price} - {p.colors} - {p.brand}")
         else:
             print("There are no products that match your criteria.")
