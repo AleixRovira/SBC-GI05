@@ -1,4 +1,5 @@
 import json
+import os
 import random
 from faker import Faker
 
@@ -11,7 +12,7 @@ fake = Faker()
 
 CATEGORIES = ["airbag", "boot", "helmet", "jacket", "glove", "pants", "full suit"]
 BRANDS = [
-    "Alpinestars", "Dainese", "Rukka", "Rev'it", "Klim", "Spidi", "Icon", "Shoei", "AGV", "HJC",
+    "Alpinestars", "Dainese", "Rukka", "Roviron", "Klim", "Spidi", "Icon", "Shoei", "AGV", "HJC",
     "Arai", "Scorpion", "Shark", "Bell", "LS2", "Nolan", "X-Lite", "Schuberth", "Held", "RST",
     "IXS", "Macna", "Modeka", "Bering", "Furygan", "TCX", "Forma", "Sidi", "Gaerne", "Revit"
 ]
@@ -55,4 +56,6 @@ def save_to_json(filename:str, num_products:int):
 
 
 if __name__ == "__main__":
+    if not os.path.exists("datasets"):
+        os.makedirs("datasets")
     save_to_json("datasets/" + FILE_NAME, NUM_LINES)
