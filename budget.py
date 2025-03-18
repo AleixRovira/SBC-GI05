@@ -1,7 +1,3 @@
-from networkx.algorithms.isomorphism.matchhelpers import categorical_edge_match
-
-from product import Product
-import json
 import re
 
 class Budget:
