@@ -1,6 +1,7 @@
 import json
 
 from budget import Budget
+from compare_products import CompareProducts
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
@@ -33,7 +34,8 @@ if __name__ == '__main__':
             replacement_finder = Replacement(products, filtered_tokens)
             replacement_finder.find_replacement()
         elif "compare" in filtered_tokens:
-            a = 1 #Aqui va buestra clase quitar la linea
+            cp = CompareProducts(products)
+            cp.compare_products(text)
         elif "budget" in filtered_tokens:
             budget = Budget(products)
             budget.checkInputForBudget(filtered_tokens)
