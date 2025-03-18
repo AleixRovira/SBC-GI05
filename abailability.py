@@ -8,20 +8,37 @@ class Abailability:
 
         final_products = self.products.copy()
 
+        remove_products = []
+
         for product in final_products:
             if not (name is None):
                 if not(product.name in tokens):
-                    final_products.remove(product)
+                    remove_products.append(product)
+
+        for product in remove_products:
+            final_products.remove(product)
+
+        remove_products = []
 
         for product in final_products:
             if not (brand is None):
                 if not(product.brand in tokens):
-                    final_products.remove(product)
+                    remove_products.append(product)
+
+        for product in remove_products:
+            final_products.remove(product)
+        
+        remove_products = []
 
         for product in final_products:            
             if not (size is None):
-                if not(product.size_availability[size] == 0):
-                    final_products.remove(product)
+                if product.size_availability[size] == 0:
+                    remove_products.append(product)
+
+        for product in remove_products:
+            final_products.remove(product)
+
+        remove_products = []
 
         for product in final_products:
             if not (color is None):
@@ -31,7 +48,10 @@ class Abailability:
                         appears = 1
                         break
                 if appears == 0:
-                    final_products.remove(product)
+                    remove_products.append(product)
+
+        for product in remove_products:
+            final_products.remove(product)
 
         quantity = len(final_products)  
 
