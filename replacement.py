@@ -6,8 +6,8 @@ class Replacement:
         self.token_list = token_list
 
     def extract_filters(self):
-        categories = {"airbags", "botas"}
-        brands = {"fox", "leatt"}
+        categories = {"airbag", "glove", "pants", "jacket", "boot", "full suit", "helmet"}
+        brands = {"Scorpion", "Sidi", "Spidi", "IXS", "Bell", "Schuberth", "Gaerne", "Held", "Dainese", "Modeka", "TCX", "Rukka", "Nolan", "Alpinestars", "Shoei", "RST", "Furygan", "Shark", "X-Lite", "LS2", "Klim", "Forma", "Macna", "AGV", "Revit", "Roviron", "Bering", "Icon", "Arai", "HJC"}
         colors = {"red", "blue", "green", "black", "white", "yellow", "orange", "purple", "pink", "gray", "brown"}
 
         category = next((word for word in self.token_list if word.lower() in categories), None)
@@ -21,13 +21,13 @@ class Replacement:
                 break
 
         if category is None:
-            category = self.ask_user("¿Quiere su producto de alguna categoría en específico?", categories)
+            category = self.ask_user("¿What type of item do you want for your replacement?", categories)
         if brand is None:
-            brand = self.ask_user("¿Quiere su producto de alguna marca en específico?", brands)
+            brand = self.ask_user("¿What is your favourite brand?", brands)
         if max_price is None:
             max_price = self.ask_price()
         if color is None:
-            color = self.ask_user("¿Quiere su producto de algún color en específico?", colors)
+            color = self.ask_user("¿Would you like it form an specific colour?", colors)
 
         return category, brand, max_price, color
 
@@ -54,8 +54,8 @@ class Replacement:
                              and (color is None or color.lower() in map(str.lower, p.colors))]
 
         if filtered_products:
-            print("Productos disponibles:")
+            print("Products:")
             for p in filtered_products:
                 print(f"{p.name} - ${p.price} - {p.colors}")
         else:
-            print("No se encontraron productos con esos criterios.")
+            print("There are no products that match your criteria.")
