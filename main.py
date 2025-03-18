@@ -1,4 +1,6 @@
 import json
+
+from budget import Budget
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
@@ -33,7 +35,8 @@ if __name__ == '__main__':
         elif "compare" in filtered_tokens:
             a = 1 #Aqui va buestra clase quitar la linea
         elif "budget" in filtered_tokens:
-            a = 1  # Aqui va buestra clase quitar la linea
+            budget = Budget(products)
+            budget.checkInputForBudget(filtered_tokens)
         elif "disponibility" in filtered_tokens:
             a = 1  # Aqui va buestra clase quitar la linea
         else:
