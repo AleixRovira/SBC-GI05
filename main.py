@@ -16,7 +16,6 @@ def read_dataset(filename: str) -> list:
             products.append(product)
     return products
 
-
 if __name__ == '__main__':
     filename = "datasets/products.json"
     products = read_dataset(filename)

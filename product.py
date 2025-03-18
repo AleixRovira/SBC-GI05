@@ -7,5 +7,3 @@ class Product:
         self.brand = brand
         self.colors = colors
         self.size_availability = size_availability
-
-    
