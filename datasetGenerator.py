@@ -4,7 +4,7 @@ import random
 from faker import Faker
 
 # Number of lines
-NUM_LINES = 1000
+NUM_LINES = 100
 # File name
 FILE_NAME = "products.json"
 

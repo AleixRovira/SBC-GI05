@@ -1,76 +1,126 @@
+from networkx.algorithms.isomorphism.matchhelpers import categorical_edge_match
+
 from product import Product
 import json
 import re
 
 class Budget:
     # Regex
-    REGEX_BUDGET = r"\b(presupuest)\w*\b"
-    CATEGORIES = ["airbag", "bota", "casco", "chaqueta", "guante", "pantalone", "trajes\scompleto"]
-    REGEX_CATEGORIES = rf"\b({'|'.join(CATEGORIES)})\b"
-    REGEX_NEGATIONS = [r"(no|sin)"]
+    REGEX_BUDGET = r"(budget)\w*"
+    CATEGORIES = [r"(airbag)\w*", r"(boot)\w*", r"(helmet)\w*", r"(jacket)\w*", r"(glove)\w*", r"(pant)\w*", r"(suit)\w*"]
+    CATEGORY_NAMES = ["airbag", "boot", "helmet", "jacket", "glove", "pants", "full suit"]
+    REGEX_CATEGORIES = rf"({'|'.join(CATEGORIES)})"
 
-    # Regular expression pattern explanation:
-    # - "\b(?:{REGEX_NEGATIONS})": Matches a negation word at the beginning.
-    # - "(?!\s+\b{REGEX_BUDGET}\b)": Negative lookahead to ensure REGEX_BUDGET does NOT appear immediately after the negation.
-    # - "(?:\s+\w+)*?": Allows any number of words between the negation and the category.
-    # - "\s+\b{REGEX_CATEGORIES}\b": Matches the target category words.
-    REGEX_INVERT_CATEGORIES = rf"\b(?:{REGEX_NEGATIONS})\b(?!\s+\b{REGEX_BUDGET}\b)(?:\s+\w+)*?\s+\b{REGEX_CATEGORIES}\b"
-
-    default_categories = [False, True, True, True, True, True, False]    # Default categories
+    non_categories = True
+    wanted_categories = [False, True, True, True, True, True, False]  # Default categories
     category_products = {}
 
     def __init__(self, products: list):
-        self.products = products
+        self.products = products.sort(key=lambda product: product.price)
         for product in products:
             if product.category not in self.category_products:
                 self.category_products[product.category] = []
             self.category_products[product.category].append(product)
 
-    # TODO Esquema:
-    # TODO Mirar si en l'input introduit s'ha introduit la paraules REGEX_BUDGET
-    # TODO Mirar si s'ha introduit una quantitat
-    # TODO Mirar si s'ha introduit un color en especific
-    # TODO Mirar si s'han introduit productes en especial, sino utilitzar DEFAULT_BUDGET_CATEGORIES
+    def budgetWithoutCategory(self):
+        print("Proposed budgets:")
+        # Printar budget alta gamma
+        total_sum = 0
+        print("\n\tHigh range:")
+        for i in range(0, len(self.CATEGORIES)):
+            if self.wanted_categories[i]:
+                index = len(self.category_products[self.CATEGORY_NAMES[i]]) - 1
+                total_sum += self.category_products[self.CATEGORY_NAMES[i]][index].price
+                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
+        print(f"\nTotal price: {round(total_sum, 2)}")
 
-    # Check if the regex REGEX_BUDGET appears
-    def checkPresupost(self):
+        # Printar budget mitja gamma
+        total_sum = 0
+        print("\n\tMid renge:")
+        for i in range(0, len(self.CATEGORIES)):
+            if self.wanted_categories[i]:
+                index = (len(self.category_products[self.CATEGORY_NAMES[i]]) - 1) // 2
+                total_sum += self.category_products[self.CATEGORY_NAMES[i]][index].price
+                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
+        print(f"\nTotal price: {round(total_sum, 2)}")
+
+        # Printar budget baixa gamma
+        total_sum = 0
+        print("\n\tLow range:")
+        for i in range(0, len(self.CATEGORIES)):
+            if self.wanted_categories[i]:
+                total_sum += self.category_products[self.CATEGORY_NAMES[i]][0].price
+                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][0].name} ({self.category_products[self.CATEGORY_NAMES[i]][0].price}€)")
+        print(f"\nTotal price: {round(total_sum, 2)}")
+
+        # Preguntar la quantitat de diners que es vol gastar
+        print("\nFor a more accurated range tell me your budget or the things you want to include\n")
         return
 
-    # Check what categories the user wants
-    def checkCategories(self, input: str):
-        # Detect all mentioned categories
-        found_categories = re.findall(self.REGEX_CATEGORIES, input, re.IGNORECASE)
+    def budgetWithCategories(self, budget: float):
+        # Buscar amb busqueda binaria la millor combinacio
+        # Busquem el index amb el budget adequat
 
-        # Check which ones are negated correctly
-        confirmed_categories = set(found_categories)
+        # Calculem el minim budget possible
+        min_budget = 0
+        for i in range(0, len(self.CATEGORIES)):
+            if self.wanted_categories[i]:
+                min_budget += self.category_products[self.CATEGORY_NAMES[i]][0].price
 
-        for category in found_categories:
-            # Create a regex to check if the category has a negation just before, without another category or presupuesto in between
-            negation_pattern = rf"{self.REGEX_NEGATIONS}(?!.*({self.REGEX_BUDGET}|{self.REGEX_CATEGORIES})).*?\b{category}\b"
+        if budget < min_budget:
+            print("The budget is very low for the products you want, this is the cheapest combination:")
+            total_sum = 0
+            for i in range(0, len(self.CATEGORIES)):
+                if self.wanted_categories[i]:
+                    total_sum += self.category_products[self.CATEGORY_NAMES[i]][0].price
+                    print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][0].name} ({self.category_products[self.CATEGORY_NAMES[i]][0].price}€)")
+            print(f"\nTotal price: {round(total_sum, 2)}")
+            return
 
-            if re.search(negation_pattern, input, re.IGNORECASE):
-                confirmed_categories.discard(category)  # Remove it if negated
+        max_budget = 0
+        for i in range(0, len(self.CATEGORIES)):
+            if self.wanted_categories[i]:
+                max_budget += self.category_products[self.CATEGORY_NAMES[i]][len(self.category_products[self.CATEGORY_NAMES[i]]) - 1].price
 
-        print(f"Sentence: {input}")
-        print(f"Confirmed categories: {list(confirmed_categories)}\n")
+        # Busquem binariament el budget indicat
+        total_sum = max_budget + 1
+        por = 100
+        while total_sum > budget and por >= 0:
+            total_sum = 0
+            for i in range(0, len(self.CATEGORIES)):
+                if self.wanted_categories[i]:
+                    index = ((len(self.category_products[self.CATEGORY_NAMES[i]]) - 1) * por) // 100
+                    total_sum += self.category_products[self.CATEGORY_NAMES[i]][index].price
+            if total_sum > budget:
+                por -= 10
 
-    # TODO: Using a greedy algorithm, make the budget proposal
-    # def makeBudget(self):
+        total_sum = 0
+        for i in range(0, len(self.CATEGORIES)):
+            if self.wanted_categories[i]:
+                index = ((len(self.category_products[self.CATEGORY_NAMES[i]]) - 1) * por) // 100
+                total_sum += self.category_products[self.CATEGORY_NAMES[i]][index].price
+                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
+        print(f"\nTotal price: {round(total_sum, 2)}")
 
-# TODO: Part a fer conjunta entre tots:
-def read_dataset(filename: str) -> list:
-    products = list()
-    with open(filename) as json_file:
-        data = json.load(json_file)
-        for data_product in data:
-            product = Product(data_product['nombre'], data_product['precio'], data_product['descripcion'],
-                              data_product['categoria'], data_product['marca'], data_product['colores'])
-            products.append(product)
-    return products
+        return
 
-if __name__ == '__main__':
-    filename = "datasets/products.json"
-    products = read_dataset(filename)
-    bg = Budget(products)
-    input_string = input("¡Hola! ¿En qué puedo ayudarte? ")
-    bg.checkInputForBudget(input_string.lower())
+    def checkInputForBudget(self, tokens: list):
+        budget = -1
+        for token in tokens:
+            if self.non_categories and re.match(self.REGEX_CATEGORIES, token):
+                self.non_categories = False
+                for i in range(0, len(self.wanted_categories)):
+                    self.wanted_categories[i] = False
+            for i in range(0, len(self.CATEGORIES)):
+                if re.match(self.CATEGORIES[i], token):
+                    self.wanted_categories[i] = True
+            # Si hi ha un numero significa que es la quantitat de diners
+            if re.match(r"^\d+([.,]\d+)?", token):
+                budget = float(token.replace(',', '.'))
+
+        # Depenent de si s'han introduit
+        if self.non_categories and budget < 0:
+            self.budgetWithoutCategory()
+        else:
+            self.budgetWithCategories(budget)
+        return

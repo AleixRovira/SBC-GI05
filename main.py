@@ -1,4 +1,6 @@
 import json
+
+from budget import Budget
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
@@ -9,7 +11,8 @@ def read_dataset(filename: str) -> list:
         data = json.load(json_file)
         for data_product in data:
             product = Product(data_product['nombre'], data_product['precio'], data_product['descripcion'],
-                              data_product['categoria'], data_product['marca'], data_product['colores'])
+                              data_product['categoria'], data_product['marca'], data_product['colores'],
+                              data_product['dispo_tallas'])
             products.append(product)
     return products
 
@@ -33,7 +36,8 @@ if __name__ == '__main__':
         elif "compare" in filtered_tokens:
             a = 1 #Aqui va buestra clase quitar la linea
         elif "budget" in filtered_tokens:
-            a = 1  # Aqui va buestra clase quitar la linea
+            budget = Budget(products)
+            budget.checkInputForBudget(filtered_tokens)
         elif "disponibility" in filtered_tokens:
             a = 1  # Aqui va buestra clase quitar la linea
         else:
