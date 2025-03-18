@@ -1,4 +1,3 @@
-
 class Product:
     def __init__(self, name: str, price: float, description: str, category: str, brand: str, colors: list) -> None:
         self.name = name
