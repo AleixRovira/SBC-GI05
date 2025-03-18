@@ -5,6 +5,7 @@ from compare_products import CompareProducts
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
+from abailability import Abailability
 
 def read_dataset(filename: str) -> list:
     products = list()
@@ -38,7 +39,8 @@ if __name__ == '__main__':
         elif "budget" in filtered_tokens:
             budget = Budget(products)
             budget.checkInputForBudget(filtered_tokens)
-        elif "disponibility" in filtered_tokens:
-            a = 1  # Aqui va buestra clase quitar la linea
+        elif "abailability" in filtered_tokens:
+            abailability = Abailability(products)
+            abailability.ask_abailability(filtered_tokens)
         else:
             print("I'm sorry, I didn't understand your request.")
