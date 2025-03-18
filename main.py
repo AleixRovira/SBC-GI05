@@ -1,4 +1,7 @@
 import json
+
+from budget import Budget
+from compare_products import CompareProducts
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
@@ -20,9 +23,8 @@ if __name__ == '__main__':
     products = read_dataset(filename)
 
     while True:
-        text = input("I am *IA name* what can I help you with? ")
+        text = input("I am GreenLandMXBot what can I help you with? ")
         filtered_tokens = tokenize(text)
-        print("Filtered Tokens:", filtered_tokens)
 
         if "thanks" in filtered_tokens:
             print("You're welcome! Have a great day!")
@@ -32,9 +34,11 @@ if __name__ == '__main__':
             replacement_finder = Replacement(products, filtered_tokens)
             replacement_finder.find_replacement()
         elif "compare" in filtered_tokens:
-            a = 1 #Aqui va buestra clase quitar la linea
+            cp = CompareProducts(products)
+            cp.compare_products(text)
         elif "budget" in filtered_tokens:
-            a = 1  # Aqui va buestra clase quitar la linea
+            budget = Budget(products)
+            budget.checkInputForBudget(filtered_tokens)
         elif "abailability" in filtered_tokens:
             abailability = Abailability(products)
             abailability.ask_abailability(filtered_tokens)
