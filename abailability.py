@@ -8,3 +8,8 @@ class abailability:
         quantity = 0
 
         return quantity
+    
+    def filter_tokens(tokens):
+        for token in tokens:
+            if token in brands:
+                return token
