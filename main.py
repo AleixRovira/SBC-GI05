@@ -22,9 +22,8 @@ if __name__ == '__main__':
     products = read_dataset(filename)
 
     while True:
-        text = input("I am *IA name* what can I help you with? ")
+        text = input("I am GreenLandMXBot what can I help you with? ")
         filtered_tokens = tokenize(text)
-        print("Filtered Tokens:", filtered_tokens)
 
         if "thanks" in filtered_tokens:
             print("You're welcome! Have a great day!")
