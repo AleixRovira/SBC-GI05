@@ -1,2 +1,6 @@
 # No pujem els datasets
 datasets/*
+
+.idea
+
+__pycache__
