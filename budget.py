@@ -118,5 +118,8 @@ class Budget:
         if self.non_categories and budget < 0:
             self.budgetWithoutCategory()
         else:
-            self.budgetWithCategories(budget)
+            if budget < 0:
+                self.budgetWithoutCategory()
+            else:
+                self.budgetWithCategories(budget)
         return
