@@ -4,7 +4,7 @@ class Abailability:
         self.abailability = True
         self.products = products
 
-    def get_abailability(self, name, brand, product, size, color, tokens) -> int:
+    def get_abailability(self, name, brand, category, size, color, tokens) -> int:
 
         final_products = self.products.copy()
 
@@ -29,6 +29,19 @@ class Abailability:
             final_products.remove(product)
         
         remove_products = []
+
+        for product in final_products:
+            if not (category is None):
+                if not(product.category in tokens):
+                    remove_products.append(product)
+
+        for product in remove_products:
+            final_products.remove(product)
+
+        remove_products = []
+
+        for product in remove_products:
+            final_products.remove(product)
 
         for product in final_products:            
             if not (size is None):
@@ -58,7 +71,7 @@ class Abailability:
         return quantity
     
     def ask_abailability(self, tokens):
-        categories = {"airbag", "glove", "pants", "jacket", "boot", "full suit", "helmet"}
+        categories = {"airbag", "airbags", "glove", "gloves", "pant", "pants", "jacket", "jackets", "boot", "boots", "full suit", "helmet", "helmets"}
         brands = {"Scorpion", "Sidi", "Spidi", "IXS", "Bell", "Schuberth", "Gaerne", "Held", "Dainese", "Modeka", "TCX", "Rukka", "Nolan", "Alpinestars", "Shoei", "RST", "Furygan", "Shark", "X-Lite", "LS2", "Klim", "Forma", "Macna", "AGV", "Revit", "Roviron", "Bering", "Icon", "Arai", "HJC"}
         colors = {"red", "blue", "green", "black", "white", "yellow", "orange", "purple", "pink", "gray", "brown"}
         sizes = ["xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"]
