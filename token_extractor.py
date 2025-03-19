@@ -9,5 +9,5 @@ def tokenize(text):
     filtered = []
     for word in tokens:
         if word not in stopwords.words('english'):
-            filtered.append(word)
+            filtered.append(word.lower())
     return filtered
