@@ -1,11 +1,17 @@
 import json
 
+import spacy
+import language_tool_python
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
 from budget import Budget
 from compare_products import CompareProducts
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
 from abailability import Abailability
+
 
 def read_dataset(filename: str) -> list:
     products = list()
@@ -18,29 +24,95 @@ def read_dataset(filename: str) -> list:
             products.append(product)
     return products
 
+
+def fix_mistakes(texto):
+    matches = tool.check(texto)
+    return language_tool_python.utils.correct(texto, matches)
+
+
+def lemmatize(texto):
+    doc = nlp(texto.lower())
+    lemmas = []
+    for token in doc:
+        if not token.is_stop and not token.is_punct:
+            lemmas.append(token.lemma_)
+    lemmatized_text = " ".join(lemmas)
+    return lemmatized_text
+
+
+def load_training_data(ruta_json, nlp):
+    with open(ruta_json, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    sentences = []
+    intentions = []
+    lemmatized_sentences = []
+
+    for intention, examples in data.items():
+        for sentence in examples:
+            sentence.append(sentences)
+            intentions.append(intention)
+            # Lematizar aquí directamente
+            doc = nlp(sentence.lower())
+            lemmas = " ".join([t.lemma_ for t in doc if not t.is_stop and not t.is_punct])
+            lemmatized_sentences.append(lemmas)
+
+    return sentences, intentions, lemmatized_sentences
+
+
+def process_user_input(user_text):
+    fixed_text = fix_mistakes(user_text)
+    lemma_text = lemmatize(fixed_text)
+    X_user = vectorizer.transform([lemma_text])
+    intention = modelo.predict(X_user)[0]
+
+    return intention
+
+
 if __name__ == '__main__':
     filename = "datasets/products.json"
     products = read_dataset(filename)
 
+    nlp = spacy.load("es_core_news_md")
+    tool = language_tool_python.LanguageTool('es')
+
+    sentences, intentions, lemmatized_sentences = load_training_data("datasets/intentions.json", nlp)
+
+    vectorizer = TfidfVectorizer()
+    X = vectorizer.fit_transform(lemmatized_sentences)
+
+    modelo = MultinomialNB()
+    modelo.fit(X, intentions)
+
+    text = input("I am GreenLandMXBot what can I help you with? ")
+
+
     while True:
-        text = input("I am GreenLandMXBot what can I help you with? ")
+        intention = process_user_input(text)
         filtered_tokens = tokenize(text)
-
-        if "thanks" in filtered_tokens:
-            print("You're welcome! Have a great day!")
-            break
-
-        if "replacement" in filtered_tokens:
-            replacement_finder = Replacement(products, filtered_tokens)
-            replacement_finder.find_replacement()
-        elif "compare" in filtered_tokens:
+        if intention == "comparar_productos":
             cp = CompareProducts(products)
             cp.compare_products(text)
-        elif "budget" in filtered_tokens:
+        elif intention == "hacer_presupuesto":
             budget = Budget(products)
             budget.checkInputForBudget(filtered_tokens)
-        elif "abailability" in filtered_tokens:
+        elif intention == "consultar_disponibilidad":
             abailability = Abailability(products)
             abailability.ask_abailability(filtered_tokens)
-        else:
-            print("I'm sorry, I didn't understand your request.")
+        elif intention == "informacion_producto":
+            print("Intention: " + intention)
+        elif intention == "seguimiento_pedido":
+            print("Intention: " + intention)
+        elif intention == "devolucion_producto":
+            replacement_finder = Replacement(products, filtered_tokens)
+            replacement_finder.find_replacement()
+        elif intention == "recomendar_talla":
+            print("Intention: " + intention)
+        elif intention == "saludo":
+            print("Hola! ¿En que te puedo ayudar?")
+            continue
+        elif intention == "despedida":
+            print("¡Hasta la próxima!")
+            break
+        print("¿Necesitas algo más?")
+

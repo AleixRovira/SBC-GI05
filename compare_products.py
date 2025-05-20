@@ -1,43 +1,40 @@
 from product import Product
 import json
+from transformers import pipeline
+
+
 class CompareProducts:
     def __init__(self, products: list):
         self.products = products
-        self.categories = list()
-        for product in products:
-            if product.category.lower() not in self.categories:
-                self.categories.append(product.category.lower())
+        self.qa_pipeline = pipeline("question-answering", model="bert-large-uncased-whole-word-masking-finetuned-squad")
+        self.context = "\n".join([
+            f"Nombre: {p.name}. Precio: {p.price} euros. Categoría: {p.category}. Marca: {p.brand}. "
+            f"Colores: {', '.join(p.colors)}. Tallas: {', '.join([str(t) for t in p.size_availability])}."
+            for p in self.products
+        ])
+
+    def compare_products(self) -> None:
+        while True:
+            pregunta = input("Haz una pregunta sobre los productos (o 'salir'): ")
+            if pregunta.lower() in ["salir", "exit"]:
+                break
+
+            respuesta = self.qa_pipeline({
+                'question': pregunta,
+                'context': self.context
+            })
+
+            print(f"Bot: {respuesta['answer']}")
 
 
-    def compare_products(self, input_string: str) -> None:
-        product_1, product_2 = None, None
-        for product in self.products:
-            if product.name.lower() in input_string.lower():
-                if product_1 is None:
-                    product_1 = product
-                else:
-                    product_2 = product
-
-        if product_1 is not None and product_2 is not None:
-            # Compare products
-            print("NAME - PRICE - BRAND - COLORS")
-            formatted_colors_1 = '/'.join(product_1.colors)
-            formatted_colors_2 = '/'.join(product_2.colors)
-            print("{0:60}{1:<20}{2:20}{3:20}".format(product_1.name, f"{product_1.price}€", product_1.brand, formatted_colors_1))
-            print("{0:60}{1:<20}{2:20}{3:20}".format(product_2.name, f"{product_2.price}€", product_2.brand, formatted_colors_2))
-            return
-
-        for category in self.categories:
-            if category in input_string.lower():
-                # Compare all products in that category
-                compare_categories = True
-                print(f"For the category {category} we have the following products: ")
-                print("{0:60}{1:20}{2:20}{3:20}".format("NAME", "PRICE", "BRAND", "COLORS"))
-                for product in self.products:
-                    if product.category.lower() == category:
-                        formatted_colors = '/'.join(product.colors)
-                        print("{0:60}{1:<20}{2:20}{3:20}".format(product.name, f"{product.price}€", product.brand, formatted_colors))
-                return
-
-        # Error, does not want to compare products and does not want to compare category
-        print("Sorry, you haven't provided me with a category or 2 products to compare, I need that information to be able to help you.")
+if __name__ == '__main__':
+    products = list()
+    with open("datasets/products.json") as json_file:
+        data = json.load(json_file)
+        for data_product in data:
+            product = Product(data_product['nombre'], data_product['precio'], data_product['descripcion'],
+                              data_product['categoria'], data_product['marca'], data_product['colores'],
+                              data_product['dispo_tallas'])
+            products.append(product)
+    compareProducts = CompareProducts(products)
+    compareProducts.compare_products()

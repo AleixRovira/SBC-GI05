@@ -1,6 +1,7 @@
 # No pujem els datasets
-datasets/*
+datasets/products.json
 
 .idea
+.venv
 
 __pycache__
