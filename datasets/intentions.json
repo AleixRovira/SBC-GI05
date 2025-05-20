@@ -1,0 +1,85 @@
+{
+  "comparar_productos": [
+    "Quiero comparar productos",
+    "¿Puedo ver una comparación entre dos cascos?",
+    "Compara el casco AGV y el Shoei",
+    "Necesito saber las diferencias entre dos modelos",
+    "¿Cuál es mejor entre estos dos cascos?",
+    "Muéstrame una comparativa entre botas",
+    "Comparación de cascos para carretera"
+  ],
+  "hacer_presupuesto": [
+    "Hazme un presupuesto con mono y guantes",
+    "Presupuesto de un casco integral y botas",
+    "¿Cuánto cuesta un equipo completo?",
+    "Quiero saber cuánto me sale un casco y un mono",
+    "Dame un presupuesto aproximado con lo básico",
+    "Necesito una estimación de precio para todo el equipo",
+    "¿Puedes calcular un presupuesto con protecciones?"
+  ],
+  "consultar_disponibilidad": [
+    "¿Tienen el casco Shoei en talla M?",
+    "Quiero saber si hay monos de cuero disponibles",
+    "¿Está en stock el casco AGV K1?",
+    "¿Puedo comprar botas talla 42 ahora?",
+    "¿Tienen existencia del modelo Dainese?",
+    "¿Dispones del mono Alpinestars?",
+    "¿Hay stock de guantes de invierno?"
+  ],
+  "informacion_producto": [
+    "Dame detalles del casco Shoei GT-Air 2",
+    "¿Qué características tiene este mono?",
+    "Muéstrame la ficha del casco AGV",
+    "Quiero saber más del producto",
+    "¿Cómo es el interior del casco?",
+    "¿Qué protecciones trae el mono Dainese?",
+    "Necesito info técnica del casco"
+  ],
+  "seguimiento_pedido": [
+    "¿Dónde va mi pedido?",
+    "Quiero rastrear mi pedido",
+    "Estado del envío por favor",
+    "¿Cuándo llega mi compra?",
+    "Necesito el seguimiento del pedido",
+    "¿Ya se envió mi pedido?",
+    "¿Mi pedido ya salió?"
+  ],
+  "devolucion_producto": [
+    "¿Cómo puedo devolver un producto?",
+    "Necesito devolver el casco",
+    "Quiero hacer una devolución porque no me queda",
+    "¿Puedo hacer devolución si está usado?",
+    "Quiero cambiar el mono por otra talla",
+    "¿Tienen política de devoluciones?",
+    "¿Puedo hacer devolución sin el ticket?"
+  ],
+  "recomendar_talla": [
+    "¿Qué talla debo elegir si mido 1.80?",
+    "Mi cabeza mide 59 cm, ¿qué talla uso?",
+    "¿Qué talla de guantes me recomiendas?",
+    "Ayúdame a elegir la talla de un casco",
+    "No sé qué talla necesito",
+    "¿Qué talla me quedaría bien?",
+    "Busco la talla adecuada para mi altura y peso"
+  ],
+  "saludo": [
+    "Hola",
+    "Buenos días",
+    "Buenas tardes",
+    "Buenas noches",
+    "Qué tal",
+    "Que tal?",
+    "Hola, ¿qué tal?",
+    "Muy buenas"
+  ],
+  "despedida": [
+    "Adiós",
+    "Hasta luego",
+    "Nos vemos",
+    "Chao",
+    "Me voy, gracias",
+    "Gracias, adiós",
+    "Hasta la próxima"
+  ]
+
+}
