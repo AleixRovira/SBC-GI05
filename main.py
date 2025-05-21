@@ -11,6 +11,7 @@ from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
 from abailability import Abailability
+from AccountFAQ import Account
 
 
 def read_dataset(filename: str) -> list:
@@ -86,7 +87,6 @@ if __name__ == '__main__':
 
     text = input("I am GreenLandMXBot what can I help you with? ")
 
-
     while True:
         intention = process_user_input(text)
         filtered_tokens = tokenize(text)
@@ -108,6 +108,9 @@ if __name__ == '__main__':
             replacement_finder.find_replacement()
         elif intention == "recomendar_talla":
             print("Intention: " + intention)
+        elif intention == "account":
+            account = Account()
+            account.answerQuestion(text)
         elif intention == "saludo":
             print("Hola! ¿En que te puedo ayudar?")
             continue

@@ -62,6 +62,22 @@
     "¿Qué talla me quedaría bien?",
     "Busco la talla adecuada para mi altura y peso"
   ],
+  "account": [
+    "¿Cómo crear una cuenta?",
+    "¿Cómo añadir mis motos a mi garaje, y por qué debo añadirla?",
+    "¿Puedo modificar los datos una vez creada mi cuenta?",
+    "¿Cómo añadir direcciones a mi cuenta?",
+    "¿Puedo enviar pedidos a otras direcciones?",
+    "¿Cómo cambiar mi contraseña?",
+    "¿Qué hago si olvidé mi contraseña o quiero cambiarla?",
+    "¿Cómo puedo realizar un seguimiento de mi historial de pedidos?",
+    "¿Cómo borrar mi cuenta de cliente?",
+    "¿Cómo puedo saber si mis datos personales están seguros? ¿Cuál es la política de privacidad y seguridad de la información? Información legal",
+    "¿Para qué sirve indicar mis preferencias? ¿Puedo modificarlas?",
+    "¿Cómo puedo darme de alta a vuestra newsletter?",
+    "¿Qué ventajas tengo si me registro?",
+    "¿Ofrecéis descuentos para compras al por mayor o programas de fidelización?"
+  ],
   "saludo": [
     "Hola",
     "Buenos días",
