@@ -131,7 +131,7 @@ if __name__ == '__main__':
     
     budget = Budget(products)
 
-    print(colors.terminalColors.RESET, end="")
+    print(COLOR_RESET, end="")
     text = input("I am GreenLandMXBot what can I help you with? ")
 
     while True:
