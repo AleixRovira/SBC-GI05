@@ -1,4 +1,5 @@
 import json
+import re
 
 import spacy
 import language_tool_python
@@ -7,12 +8,12 @@ from sklearn.naive_bayes import MultinomialNB
 
 from budget import Budget
 from compare_products import CompareProducts
+from contactFAQ import contactFAQ
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
 from abailability import Abailability
-from AccountFAQ import Account
-
+import FrequentlyAskQuestions
 
 def read_dataset(filename: str) -> list:
     products = list()
@@ -108,9 +109,10 @@ if __name__ == '__main__':
             replacement_finder.find_replacement()
         elif intention == "recomendar_talla":
             print("Intention: " + intention)
-        elif intention == "account":
-            account = Account()
-            account.answerQuestion(text)
+        elif (re.match("account_.*", intention)
+              and re.match("contact_.*", intention)
+              and re.match("gift_card_.*", intention)):
+            FrequentlyAskQuestions.answerQuestion(intention)
         elif intention == "saludo":
             print("Hola! ¿En que te puedo ayudar?")
             continue

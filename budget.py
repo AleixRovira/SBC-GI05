@@ -2,9 +2,8 @@ import re
 
 class Budget:
     # Regex
-    REGEX_BUDGET = r"(budget)\w*"
-    CATEGORIES = [r"(airbag)\w*", r"(boot)\w*", r"(helmet)\w*", r"(jacket)\w*", r"(glove)\w*", r"(pant)\w*", r"(suit)\w*"]
-    CATEGORY_NAMES = ["airbag", "boot", "helmet", "jacket", "glove", "pants", "full suit"]
+    CATEGORIES = [r"(airbag)\w*", r"(bota)\w*", r"(casco)\w*", r"(chaqueta)\w*", r"(guantes)\w*", r"(pantalon)\w*", r"(traje)\w*"]
+    CATEGORY_NAMES = ["airbag", "bota", "casco", "chaqueta", "guantes", "pantalon", "traje completo"]
     REGEX_CATEGORIES = rf"({'|'.join(CATEGORIES)})"
 
     non_categories = True
