@@ -14,11 +14,11 @@ class FrequentlyAskQuestions:
         return data
 
     def answerQuestion(self, intention: str):
-        if re.match(r"account_.*", intention):
+        if re.match(r"\baccount_\w+\b", intention):
             answers = self.loadAnswers(self.ACCOUNT_JSON)
-        elif re.match(r"contact_.*", intention):
+        elif re.match(r"\bcontact_\w+\b", intention):
             answers = self.loadAnswers(self.CONTACT_JSON)
-        else: # "gift_card_.*"
+        else: # r"\bgift_card_\w+\b"
             answers = self.loadAnswers(self.GIFT_CARD_JSON)
 
-        print(answers[intention] + "\n\n")
+        print(answers[intention] + "\n")

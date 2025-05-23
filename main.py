@@ -8,7 +8,6 @@ from sklearn.naive_bayes import MultinomialNB
 
 from budget import Budget
 from compare_products import CompareProducts
-from contactFAQ import contactFAQ
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
@@ -52,7 +51,7 @@ def load_training_data(ruta_json, nlp):
 
     for intention, examples in data.items():
         for sentence in examples:
-            sentence.append(sentences)
+            sentences.append(sentence)
             intentions.append(intention)
             # Lematizar aquí directamente
             doc = nlp(sentence.lower())
@@ -86,6 +85,8 @@ if __name__ == '__main__':
     modelo = MultinomialNB()
     modelo.fit(X, intentions)
 
+    budget = Budget(products)
+
     text = input("I am GreenLandMXBot what can I help you with? ")
 
     while True:
@@ -95,7 +96,6 @@ if __name__ == '__main__':
             cp = CompareProducts(products)
             cp.compare_products(text)
         elif intention == "hacer_presupuesto":
-            budget = Budget(products)
             budget.checkInputForBudget(filtered_tokens)
         elif intention == "consultar_disponibilidad":
             abailability = Abailability(products)
@@ -109,15 +109,16 @@ if __name__ == '__main__':
             replacement_finder.find_replacement()
         elif intention == "recomendar_talla":
             print("Intention: " + intention)
-        elif (re.match("account_.*", intention)
-              and re.match("contact_.*", intention)
-              and re.match("gift_card_.*", intention)):
-            FrequentlyAskQuestions.answerQuestion(intention)
+        elif (re.match(r"\baccount_\w+\b", intention)
+              or re.match(r"\bcontact_\w+\b", intention)
+              or re.match(r"\bgift_card_\w+\b", intention)):
+            faq = FrequentlyAskQuestions.FrequentlyAskQuestions()
+            faq.answerQuestion(intention)
         elif intention == "saludo":
             print("Hola! ¿En que te puedo ayudar?")
             continue
         elif intention == "despedida":
             print("¡Hasta la próxima!")
             break
-        print("¿Necesitas algo más?")
+        text = input("¿Necesitas algo más? ")
 
