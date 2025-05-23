@@ -11,8 +11,8 @@ from compare_products import CompareProducts
 from product import Product
 from replacement import Replacement
 from token_extractor import tokenize
-from abailability import Abailability
 import FrequentlyAskQuestions
+from availability import Availability
 
 SIMILARITY_THRESHOLD = 0.6
 
@@ -128,14 +128,16 @@ if __name__ == '__main__':
 
     modelo = MultinomialNB()
     modelo.fit(X, intentions)
-
+    
     budget = Budget(products)
 
     print(colors.terminalColors.RESET, end="")
     text = input("I am GreenLandMXBot what can I help you with? ")
 
     while True:
+        text = input("Soy GreenLandMXBot en que puedo ayudarte? ")
         intention = process_user_input(text)
+        print("Intention: " + intention)
         filtered_tokens = tokenize(text)
         print(COLOR_BLUE, end="")
         if intention == "comparar_productos":
@@ -144,8 +146,9 @@ if __name__ == '__main__':
         elif intention == "hacer_presupuesto":
             budget.checkInputForBudget(filtered_tokens)
         elif intention == "consultar_disponibilidad":
-            abailability = Abailability(products)
-            abailability.ask_abailability(filtered_tokens)
+            availability = Availability(products)
+            respuesta = availability.answer_availability(filtered_tokens)
+            print(respuesta)
         elif intention == "informacion_producto":
             print("Intention: " + intention)
         elif intention == "seguimiento_pedido":

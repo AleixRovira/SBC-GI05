@@ -1,10 +1,10 @@
 
-class Abailability:
+class Availability:
     def __init__(self, products):
-        self.abailability = True
+        self.availability = True
         self.products = products
 
-    def get_abailability(self, name, brand, category, size, color, tokens) -> int:
+    def get_availability(self, name, brand, category, size, color, tokens) -> int:
 
         final_products = self.products.copy()
 
@@ -70,7 +70,7 @@ class Abailability:
 
         return quantity
     
-    def ask_abailability(self, tokens):
+    def answer_availability(self, tokens):
         categories = {"airbag", "airbags", "glove", "gloves", "pant", "pants", "jacket", "jackets", "boot", "boots", "full suit", "helmet", "helmets"}
         brands = {"Scorpion", "Sidi", "Spidi", "IXS", "Bell", "Schuberth", "Gaerne", "Held", "Dainese", "Modeka", "TCX", "Rukka", "Nolan", "Alpinestars", "Shoei", "RST", "Furygan", "Shark", "X-Lite", "LS2", "Klim", "Forma", "Macna", "AGV", "Revit", "Roviron", "Bering", "Icon", "Arai", "HJC"}
         colors = {"red", "blue", "green", "black", "white", "yellow", "orange", "purple", "pink", "gray", "brown"}
@@ -83,20 +83,24 @@ class Abailability:
         color = None
 
         for token in tokens:
-            token.lower()
-            if token in brands:
-                brand = token
-            elif token in categories:
-                category = token
-            elif token in colors:
-                color = token
-            elif token in sizes:
-                size = sizes.index(token)
+            t = token.lower()
+            if t in brands:
+                brand = t
+            elif t in categories:
+                category = t
+            elif t in colors:
+                color = t
+            elif t in sizes:
+                size = t
 
         for product in self.products:
-            if product.name in tokens:
+            if product.name.lower() in [tok.lower() for tok in tokens]:
                 name = product.name
                 break
-        
-        abailable_items = self.get_abailability(name, brand, category, size, color, tokens)
-        print(f"There are {abailable_items} products that match your criteria.")
+
+        available_items = self.get_availability(name, brand, category, size, color, tokens)
+
+        if available_items > 0:
+            return f"Sí, tenemos {available_items} producto(s) que cumplen tus criterios."
+        else:
+            return "Lo siento, no tenemos productos que cumplan esos criterios en este momento."
