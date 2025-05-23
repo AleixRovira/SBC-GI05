@@ -4,6 +4,7 @@ class Budget:
     # Regex
     CATEGORIES = [r"(airbag)\w*", r"(bota)\w*", r"(casco)\w*", r"(chaqueta)\w*", r"(guante)\w*", r"(pantalon)\w*", r"(traje)\w*"]
     CATEGORY_NAMES = ["airbag", "boot", "helmet", "jacket", "glove", "pants", "full suit"]
+    CATEGORY_NAMES_SPANISH = ["airbag", "botas", "casco", "chaqueta", "guantes", "pantalones", "traje completo"]
     REGEX_CATEGORIES = rf"({'|'.join(CATEGORIES)})"
 
     non_new_categories = True
@@ -26,7 +27,7 @@ class Budget:
             if self.wanted_categories[i]:
                 index = len(self.category_products[self.CATEGORY_NAMES[i]]) - 1
                 total_sum += self.category_products[self.CATEGORY_NAMES[i]][index].price
-                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
+                print(f" - {self.CATEGORY_NAMES_SPANISH[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
         print(f"\nPrecio total: {round(total_sum, 2)}")
 
         # Presupuesto gama media
@@ -36,7 +37,7 @@ class Budget:
             if self.wanted_categories[i]:
                 index = (len(self.category_products[self.CATEGORY_NAMES[i]]) - 1) // 2
                 total_sum += self.category_products[self.CATEGORY_NAMES[i]][index].price
-                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
+                print(f" - {self.CATEGORY_NAMES_SPANISH[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
         print(f"\nPrecio total: {round(total_sum, 2)}")
 
         # Presupuesto gama baja
@@ -45,7 +46,7 @@ class Budget:
         for i in range(0, len(self.CATEGORIES)):
             if self.wanted_categories[i]:
                 total_sum += self.category_products[self.CATEGORY_NAMES[i]][0].price
-                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][0].name} ({self.category_products[self.CATEGORY_NAMES[i]][0].price}€)")
+                print(f" - {self.CATEGORY_NAMES_SPANISH[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][0].name} ({self.category_products[self.CATEGORY_NAMES[i]][0].price}€)")
         print(f"\nPrecio total: {round(total_sum, 2)}")
 
     def budgetWithCategories(self, budget: float):
@@ -61,8 +62,9 @@ class Budget:
             for i in range(0, len(self.CATEGORIES)):
                 if self.wanted_categories[i]:
                     total_sum += self.category_products[self.CATEGORY_NAMES[i]][0].price
-                    print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][0].name} ({self.category_products[self.CATEGORY_NAMES[i]][0].price}€)")
+                    print(f" - {self.CATEGORY_NAMES_SPANISH[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][0].name} ({self.category_products[self.CATEGORY_NAMES[i]][0].price}€)")
             print(f"\nPrecio total: {round(total_sum, 2)}")
+            return
 
         # Calcular el presupuesto máximo posible
         max_budget = 0
@@ -87,13 +89,12 @@ class Budget:
             if self.wanted_categories[i]:
                 index = ((len(self.category_products[self.CATEGORY_NAMES[i]]) - 1) * por) // 100
                 total_sum += self.category_products[self.CATEGORY_NAMES[i]][index].price
-                print(f" - {self.CATEGORY_NAMES[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
+                print(f" - {self.CATEGORY_NAMES_SPANISH[i].upper()}: {self.category_products[self.CATEGORY_NAMES[i]][index].name} ({self.category_products[self.CATEGORY_NAMES[i]][index].price}€)")
         print(f"\nPrecio total: {round(total_sum, 2)}")
 
     def checkInputForBudget(self, tokens: list):
         budget = -1
         for token in tokens:
-            if re.match(r"\d+", token): re.sub(r'[€$£¥]', '', token)
             if self.non_new_categories and re.match(self.REGEX_CATEGORIES, token):
                 self.non_new_categories = False
                 for i in range(0, len(self.wanted_categories)):
@@ -103,6 +104,9 @@ class Budget:
                     self.wanted_categories[i] = True
             # Si hay un número, es el presupuesto
             if re.match(r"^\d+([.,]\d+)?", token):
+                # Borrem els caracters que no siguin ni digits ni nombres
+                token = re.sub(r'[^.,\d]', '', token)
+                # Pasem la quantitat com a budgeet
                 budget = float(token.replace(',', '.'))
 
         # Dependiendo de los datos introducidos

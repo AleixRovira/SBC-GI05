@@ -21,4 +21,4 @@ class FrequentlyAskQuestions:
         else: # r"\bgift_card_\w+\b"
             answers = self.loadAnswers(self.GIFT_CARD_JSON)
 
-        print(answers[intention] + "\n")
+        print("\n" + answers[intention] + "\n")
