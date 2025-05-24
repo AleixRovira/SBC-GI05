@@ -83,11 +83,10 @@ if __name__ == '__main__':
 
     modelo = MultinomialNB()
     modelo.fit(X, intentions)
+    text = input("Soy GreenLandMXBot en que puedo ayudarte?\n")
 
     while True:
-        text = input("Soy GreenLandMXBot en que puedo ayudarte? ")
         intention = process_user_input(text)
-        print("Intention: " + intention)
         filtered_tokens = tokenize(text)
         
         if intention == "comparar_productos":
@@ -115,5 +114,5 @@ if __name__ == '__main__':
         elif intention == "despedida":
             print("¡Hasta la próxima!")
             break
-        print("¿Necesitas algo más?")
+        text = input("¿Necesitas algo más?\n")
 

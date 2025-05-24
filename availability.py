@@ -3,6 +3,20 @@ class Availability:
     def __init__(self, products):
         self.availability = True
         self.products = products
+        self.category_translation = {
+            "guante": "glove", "guantes": "glove",
+            "pantalon": "pant", "pantalones": "pant",
+            "chaqueta": "jacket", "chaquetas": "jacket",
+            "bota": "boot", "botas": "boot",
+            "mono": "full suit", "monos": "full suit",
+            "casco": "helmet", "cascos": "helmet",
+            "airbag": "airbag", "airbags": "airbag"
+        }
+        self.color_translation = {
+            "rojo": "red", "azul": "blue", "verde": "green", "negro": "black",
+            "blanco": "white", "amarillo": "yellow", "naranja": "orange",
+            "morado": "purple", "rosa": "pink", "gris": "gray", "marron": "brown"
+        }
 
     def get_availability(self, name, brand, category, size, color, tokens) -> int:
 
@@ -17,7 +31,7 @@ class Availability:
 
         for product in remove_products:
             final_products.remove(product)
-
+            
         remove_products = []
 
         for product in final_products:
@@ -71,9 +85,9 @@ class Availability:
         return quantity
     
     def answer_availability(self, tokens):
-        categories = {"airbag", "airbags", "glove", "gloves", "pant", "pants", "jacket", "jackets", "boot", "boots", "full suit", "helmet", "helmets"}
-        brands = {"Scorpion", "Sidi", "Spidi", "IXS", "Bell", "Schuberth", "Gaerne", "Held", "Dainese", "Modeka", "TCX", "Rukka", "Nolan", "Alpinestars", "Shoei", "RST", "Furygan", "Shark", "X-Lite", "LS2", "Klim", "Forma", "Macna", "AGV", "Revit", "Roviron", "Bering", "Icon", "Arai", "HJC"}
-        colors = {"red", "blue", "green", "black", "white", "yellow", "orange", "purple", "pink", "gray", "brown"}
+        categories = {"airbag", "airbags", "glove", "gloves", "guante", "guantes", "pant", "pants", "pantalon", "pantalones", "jacket", "jackets", "chaqueta", "chaquetas", "boot", "boots", "bota", "botas", "full suit", "full suits", "mono", "monos", "helmet", "helmets", "casco", "cascos"}
+        brands = {"scorpion", "sidi", "spidi", "ixs", "bell", "schuberth", "gaerne", "held", "dainese", "modeka", "tcx", "rukka", "nolan", "alpinestars", "shoei", "rst", "furygan", "shark", "x-lite", "ls2", "klim", "forma", "macna", "agv", "revit", "roviron", "bering", "icon", "arai", "hjc"}
+        colors = {"red", "rojo", "blue", "azul", "green", "verde", "black", "negro", "white", "blanco", "yellow", "marillo", "orange", "naranja", "purple", "morado", "pink", "rosa", "gray", "gris", "brown", "marron"}
         sizes = ["xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl"]
 
         name = None
@@ -81,8 +95,21 @@ class Availability:
         category = None
         size = None
         color = None
-
+        
+        # Traduce tokens de español a inglés si es necesario
+        translated_tokens = []
         for token in tokens:
+            t = token.lower()
+            # Traducción de categorías
+            if t in self.category_translation:
+                translated_tokens.append(self.category_translation[t])
+            # Traducción de colores
+            elif t in self.color_translation:
+                translated_tokens.append(self.color_translation[t])
+            else:
+                translated_tokens.append(t)
+
+        for token in translated_tokens:
             t = token.lower()
             if t in brands:
                 brand = t
@@ -91,14 +118,16 @@ class Availability:
             elif t in colors:
                 color = t
             elif t in sizes:
-                size = t
+                size = sizes.index(t)
 
         for product in self.products:
             if product.name.lower() in [tok.lower() for tok in tokens]:
                 name = product.name
                 break
+        
+        print(name, brand, category, size, color)
 
-        available_items = self.get_availability(name, brand, category, size, color, tokens)
+        available_items = self.get_availability(name, brand, category, size, color, translated_tokens)
 
         if available_items > 0:
             return f"Sí, tenemos {available_items} producto(s) que cumplen tus criterios."
