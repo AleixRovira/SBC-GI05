@@ -12,8 +12,10 @@ SBC-GI05
 - Aleix Rovira Massana
 
 ## Requisits
-
-Executar el fitxer de requirements.txt per instal·lar totes les dependències:
+1. Instalar python v3.8 y tenerlo habilitado como interprete.
+2. Ejecutar: py -3.8 -m venv .venv
+3. Ejecutar: .\.venv\Scripts\Activate.ps1
+4. Executar el fitxer de requirements.txt per instal·lar totes les dependències:
 - pip install -r requirements.txt
 ¡Cal tindre Microsoft Visual C++ 14.0 o superior si no hi ha dependències que no s'instal·len correctament!
 
