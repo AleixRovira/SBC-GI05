@@ -137,8 +137,6 @@ class Availability:
             if product.name.lower() in [tok.lower() for tok in tokens]:
                 name = product.name
                 break
-        
-        print(name, brand, category, size, color)
 
         available_items = self.get_availability(name, brand, category, size, color, translated_tokens)
 
