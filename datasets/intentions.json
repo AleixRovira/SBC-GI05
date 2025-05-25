@@ -48,13 +48,13 @@
     "Donde esta mi pedido"
   ],
   "devolucion_producto": [
-    "¿Cómo puedo devolver un producto?",
-    "Necesito devolver el casco",
-    "Quiero hacer una devolución porque no me queda",
-    "¿Puedo hacer devolución si está usado?",
-    "Quiero cambiar el mono por otra talla",
-    "¿Tienen política de devoluciones?",
-    "¿Puedo hacer devolución sin el ticket?"
+  "Necesito un reemplazo para mi casco",
+  "Quiero cambiar mis guantes por otros de otra marca",
+  "Busco una chaqueta parecida pero de otro color",
+  "¿Qué botas me recomiendas como reemplazo?",
+  "¿Tienen un casco similar pero más barato?",
+  "Quiero reemplazar mi airbag por uno de otra marca",
+  "¿Puedes ayudarme a encontrar un sustituto para mis pantalones?"
   ],
   "recomendar_talla": [
     "¿Qué talla debo elegir si mido 1.80?",
@@ -300,6 +300,83 @@
     "¿La tarjeta regalo puede usarla otra persona?",
     "¿Puede otro beneficiarse de mi tarjeta regalo?",
     "¿Se puede ceder una tarjeta regalo a otra persona?"
+  ],
+  "payment_methods_available": [
+    "¿Qué métodos de pago aceptan?",
+    "¿Qué opciones de pago están disponibles en la web?",
+    "¿Qué formas de pago puedo usar?",
+    "¿Aceptan tarjetas, Bizum o PayPal?",
+    "¿Se puede pagar por transferencia bancaria?"
+  ],
+  "payment_secure": [
+    "¿Es seguro pagar en vuestra web?",
+    "¿Qué medidas de seguridad usáis para el pago?",
+    "¿Mis datos bancarios están protegidos?",
+    "¿La pasarela de pago es segura?",
+    "¿Utilizáis cifrado SSL en los pagos?"
+  ],
+  "payment_on_delivery": [
+    "¿Puedo pagar contra reembolso?",
+    "¿Tenéis opción de pago al recibir el pedido?",
+    "¿Cobráis algo extra por el pago a la entrega?",
+    "¿Está disponible el pago contra reembolso en mi país?",
+    "¿Cómo funciona el pago al recibir el producto?"
+  ],
+  "shipping_methods": [
+    "¿Qué métodos de envío están disponibles?",
+    "¿Hacéis envíos a domicilio?",
+    "¿Puedo recoger mi pedido en tienda o punto de recogida?",
+    "¿Con qué empresas de mensajería trabajáis?",
+    "¿Qué opciones de entrega ofrecéis?"
+  ],
+  "shipping_times": [
+    "¿Cuánto tarda en llegar el pedido?",
+    "¿Cuál es el tiempo estimado de entrega?",
+    "¿En cuántos días recibiré mi compra?",
+    "¿Cuánto se demora el envío estándar?",
+    "¿Qué tiempo de espera tiene el envío exprés?"
+  ],
+  "shipping_costs": [
+    "¿Cuánto cuesta el envío?",
+    "¿El envío tiene coste adicional?",
+    "¿Cómo se calcula el precio del envío?",
+    "¿El precio del transporte varía según el peso?",
+    "¿Puedo ver los gastos de envío antes de pagar?"
+  ],
+  "shipping_tracking": [
+    "¿Cómo puedo seguir mi pedido?",
+    "¿Recibiré un número de seguimiento?",
+    "¿Dónde consulto el estado de mi envío?",
+    "¿Me avisáis cuando el pedido sale?",
+    "¿Puedo rastrear mi paquete online?"
+  ],
+  "promo_current_offers": [
+    "¿Qué promociones están activas ahora?",
+    "¿Tenéis alguna oferta disponible?",
+    "¿Qué descuentos hay actualmente?",
+    "¿Dónde puedo ver las promociones?",
+    "¿Hay alguna campaña activa?"
+  ],
+  "promo_use_coupon": [
+    "¿Cómo uso un cupón de descuento?",
+    "¿Dónde se introduce el código promocional?",
+    "¿Puedo aplicar un código en mi compra?",
+    "¿Qué tengo que hacer para usar un cupón?",
+    "¿Dónde aplico el cupón de oferta?"
+  ],
+  "promo_coupon_validity": [
+    "¿Cuánto tiempo dura un cupón?",
+    "¿Los cupones tienen fecha de caducidad?",
+    "¿Cómo sé si mi cupón sigue siendo válido?",
+    "¿Hasta cuándo puedo usar mi código?",
+    "¿Mi cupón ha expirado?"
+  ],
+  "promo_coupon_conditions": [
+    "¿Qué condiciones tienen los cupones?",
+    "¿Hay un mínimo de compra para usar el cupón?",
+    "¿Puedo usar varios cupones en un pedido?",
+    "¿El cupón sirve para cualquier producto?",
+    "¿Los cupones se aplican en rebajas?"
   ],
   "saludo": [
     "Hola",

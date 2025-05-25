@@ -7,7 +7,7 @@ SBC-GI05
 ### Integrants
 
 - Adrià Martínez Gallifa
-- Ignasi Ràfols Lluçà
+- Ignasi Ràfols Llusà
 - Raquel Riteco Cabañas
 - Aleix Rovira Massana
 
