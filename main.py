@@ -13,6 +13,8 @@ from replacement import Replacement
 from token_extractor import tokenize
 import FrequentlyAskQuestions
 from availability import Availability
+from info_product import InfoProduct
+from order_tracking_info import OrderTrackingInfo
 
 SIMILARITY_THRESHOLD = 0.6
 
@@ -42,7 +44,7 @@ def lemmatize(texto):
     doc = nlp(texto.lower())
     lemmas = []
     for token in doc:
-        if not token.is_stop and not token.is_punct:
+        if not token.is_punct:
             lemmas.append(token.lemma_)
     lemmatized_text = " ".join(lemmas)
     return lemmatized_text
@@ -60,10 +62,8 @@ def load_training_data(ruta_json, nlp):
         for sentence in examples:
             sentences.append(sentence)
             intentions.append(intention)
-            # Lematizar aquí directamente
-            doc = nlp(sentence.lower())
-            lemmas = " ".join([t.lemma_ for t in doc if not t.is_stop and not t.is_punct])
-            lemmatized_sentences.append(lemmas)
+            lemmatized = lemmatize(sentence)
+            lemmatized_sentences.append(lemmatized)
 
     return sentences, intentions, lemmatized_sentences
 
@@ -77,7 +77,7 @@ def process_user_input(user_text):
     intention = modelo.predict(X_user)[0]
 
     # Verificar similitud
-    doc_usuario = nlp(user_text.lower())
+    doc_usuario = nlp(lemma_text)
 
     frases_de_intencion = [
         s for s, i in zip(sentences, intentions) if i == intention
@@ -131,6 +131,11 @@ if __name__ == '__main__':
     budget = Budget(products)
 
     print(COLOR_RESET, end="")
+
+    cp = CompareProducts(products)
+    ip = InfoProduct(products)
+    oti = OrderTrackingInfo()
+
     text = input("Soy GreenLandMXBot en que puedo ayudarte?\n")
 
     while True:
@@ -140,8 +145,7 @@ if __name__ == '__main__':
         print(COLOR_BLUE, end="")
   
         if intention == "comparar_productos":
-            cp = CompareProducts(products)
-            cp.compare_products(text)
+            cp.compare_products(fix_mistakes(text))
         elif intention == "hacer_presupuesto":
             budget.checkInputForBudget(filtered_tokens)
         elif intention == "consultar_disponibilidad":
@@ -149,9 +153,9 @@ if __name__ == '__main__':
             respuesta = availability.answer_availability(filtered_tokens)
             print(respuesta)
         elif intention == "informacion_producto":
-            print("Intention: " + intention)
+            ip.show_info()
         elif intention == "seguimiento_pedido":
-            print("Intention: " + intention)
+            oti.get_response()
         elif intention == "devolucion_producto":
             replacement_finder = Replacement(products, filtered_tokens)
             replacement_finder.find_replacement()

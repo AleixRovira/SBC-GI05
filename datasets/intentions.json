@@ -34,7 +34,8 @@
     "Quiero saber más del producto",
     "¿Cómo es el interior del casco?",
     "¿Qué protecciones trae el mono Dainese?",
-    "Necesito info técnica del casco"
+    "Necesito información técnica del casco",
+    "quiero informacion sobre un producto"
   ],
   "seguimiento_pedido": [
     "¿Dónde va mi pedido?",
@@ -42,8 +43,9 @@
     "Estado del envío por favor",
     "¿Cuándo llega mi compra?",
     "Necesito el seguimiento del pedido",
-    "¿Ya se envió mi pedido?",
-    "¿Mi pedido ya salió?"
+    "Cómo funciona el seguimiento de mi pedido",
+    "Como consulto por donde va mi pedido",
+    "Donde esta mi pedido"
   ],
   "devolucion_producto": [
     "¿Cómo puedo devolver un producto?",
