@@ -88,6 +88,7 @@ if __name__ == '__main__':
     while True:
         intention = process_user_input(text)
         filtered_tokens = tokenize(text)
+        print("Intention detected: " + intention)
         
         if intention == "comparar_productos":
             cp = CompareProducts(products)
@@ -109,7 +110,7 @@ if __name__ == '__main__':
         elif intention == "recomendar_talla":
             print("Intention: " + intention)
         elif intention == "saludo":
-            print("Hola! ¿En que te puedo ayudar?")
+            text = input("Hola! ¿En que te puedo ayudar?\n")
             continue
         elif intention == "despedida":
             print("¡Hasta la próxima!")
