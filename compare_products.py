@@ -1,12 +1,14 @@
 
 
 class CompareProducts:
-    def __init__(self, products: list):
+    def __init__(self, products: list, translated_categories, translated_colors):
         self.products = products
         self.categories = list()
         for product in products:
             if product.category.lower() not in self.categories:
                 self.categories.append(product.category.lower())
+        self.translated_categories = translated_categories
+        self.translated_colors = translated_colors
 
     def compare_products(self, input_string: str) -> None:
         product_1, product_2 = None, None
@@ -27,10 +29,10 @@ class CompareProducts:
             return
 
         for category in self.categories:
-            if category in input_string.lower():
+            if self.translated_categories[category] in input_string.lower():
                 # Compare all products in that category
                 compare_categories = True
-                print(f"Para la categoría {category} tenemos los siguientes productos:")
+                print(f"Para la categoría {self.translated_categories[category]} tenemos los siguientes productos:")
                 print("{0:30}{1:20}{2:20}{3:20}".format("NOMBRE", "PRECIO", "MARCA", "COLORES"))
                 for product in self.products:
                     if product.category.lower() == category:

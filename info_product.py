@@ -1,8 +1,10 @@
 import textwrap
 
 class InfoProduct:
-    def __init__(self, products: list):
+    def __init__(self, products: list, translated_categories, translated_colors):
         self.products = products
+        self.translated_categories = translated_categories
+        self.translated_colors = translated_colors
 
     def show_info(self) -> None:
         input_string = input("¿Sobre qué producto quieres información? ")
@@ -10,7 +12,10 @@ class InfoProduct:
         for product in self.products:
             if product.name.lower() in input_string.lower():
                 # Construir el párrafo informativo
-                colores = ', '.join(product.colors)
+                new_colors = []
+                for color in product.colors:
+                    new_colors.append(self.translated_colors[color])
+                colores = ', '.join(new_colors)
                 tallas = ', '.join(map(str, product.size_availability))
                 texto = (
                     f"El producto **{product.name}** es un {product.category.lower()} de la marca {product.brand}."

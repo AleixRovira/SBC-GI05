@@ -10,13 +10,13 @@ FILE_NAME = "products.json"
 
 fake = Faker()
 
-CATEGORIES = ["airbag", "bota", "casco", "chaqueta", "guante", "pantalones", "traje completo"]
+CATEGORIES = ["airbag", "boot", "helmet", "jacket", "glove", "pants", "full suit"]
 BRANDS = [
     "Alpinestars", "Dainese", "Rukka", "Roviron", "Klim", "Spidi", "Icon", "Shoei", "AGV", "HJC",
     "Arai", "Scorpion", "Shark", "Bell", "LS2", "Nolan", "X-Lite", "Schuberth", "Held", "RST",
     "IXS", "Macna", "Modeka", "Bering", "Furygan", "TCX", "Forma", "Sidi", "Gaerne", "Revit"
 ]
-COLORS = ["negro", "blanco", "rojo", "azul", "verde", "amarillo", "naranja", "gris"]
+COLORS = ["black", "white", "red", "blue", "green", "yellow", "orange", "gray"]
 
 def generate_product():
     category = random.choice(CATEGORIES)
