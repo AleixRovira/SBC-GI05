@@ -128,22 +128,22 @@ if __name__ == '__main__':
 
     modelo = MultinomialNB()
     modelo.fit(X, intentions)
-    
     budget = Budget(products)
 
     print(COLOR_RESET, end="")
-    text = input("Soy GreenLandMXBot en que puedo ayudarte? ")
 
     cp = CompareProducts(products)
     ip = InfoProduct(products)
     oti = OrderTrackingInfo()
 
-    while True:
+    text = input("Soy GreenLandMXBot en que puedo ayudarte?\n")
 
+    while True:
         intention = process_user_input(text)
-        print("Intention: " + intention)
-        filtered_tokens = tokenize(text)
+        filtered_tokens = tokenize(text)        
+
         print(COLOR_BLUE, end="")
+  
         if intention == "comparar_productos":
             cp.compare_products(fix_mistakes(text))
         elif intention == "hacer_presupuesto":
@@ -161,6 +161,7 @@ if __name__ == '__main__':
             replacement_finder.find_replacement()
         elif intention == "recomendar_talla":
             print("Intention: " + intention)
+
         elif (re.match(r"\baccount_\w+\b", intention)
               or re.match(r"\bcontact_\w+\b", intention)
               or re.match(r"\bgift_card_\w+\b", intention)):
