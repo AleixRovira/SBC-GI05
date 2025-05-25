@@ -1,3 +1,4 @@
+import random
 
 class Availability:
     def __init__(self, products):
@@ -17,6 +18,18 @@ class Availability:
             "blanco": "white", "amarillo": "yellow", "naranja": "orange",
             "morado": "purple", "rosa": "pink", "gris": "gray", "marron": "brown"
         }
+        self.yes_responses = [
+            "Sí, tenemos {available_items} producto(s) que cumplen tus criterios.",
+            "Claro, hay {available_items} producto(s) disponibles que coinciden con tus criterios.",
+            "Por supuesto, tenemos {available_items} producto(s) que cumplen con lo que buscas.",
+            "Sí, hay {available_items} producto(s) que coinciden con tus criterios."
+        ]
+        self.no_responses = [
+            "Lo siento, no tenemos productos que cumplan esos criterios en este momento.",
+            "Desafortunadamente, no hay productos disponibles que coincidan con tus criterios.",
+            "No contamos con productos que cumplan con lo que buscas en este momento.",
+            "Lamentablemente, no hay productos disponibles que coincidan con lo que buscas."
+        ]
 
     def get_availability(self, name, brand, category, size, color, tokens) -> int:
 
@@ -35,8 +48,8 @@ class Availability:
         remove_products = []
 
         for product in final_products:
-            if not (brand is None):
-                if not(product.brand in tokens):
+            if brand is not None:
+                if product.brand.lower() != brand.lower():
                     remove_products.append(product)
 
         for product in remove_products:
@@ -130,6 +143,8 @@ class Availability:
         available_items = self.get_availability(name, brand, category, size, color, translated_tokens)
 
         if available_items > 0:
-            return f"Sí, tenemos {available_items} producto(s) que cumplen tus criterios."
+            # Devolver una respuesta aleatoria de las respuestas afirmativas
+            response = random.choice(self.yes_responses).format(available_items=available_items)
+            return response
         else:
             return "Lo siento, no tenemos productos que cumplan esos criterios en este momento."
