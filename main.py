@@ -6,6 +6,8 @@ import language_tool_python
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
+import Promotions
+import paymentMethods
 from budget import Budget
 from compare_products import CompareProducts
 from product import Product
@@ -157,7 +159,12 @@ if __name__ == '__main__':
             replacement_finder.find_replacement()
         elif intention == "recomendar_talla":
             print("Intention: " + intention)
-
+        elif (re.match(r"\b(payment|shipping)_\w+\b", intention)):
+            pm = paymentMethods.PaymentMethod()
+            pm.answerQuestion(intention)
+        elif re.match(r"^promo_", intention):
+            promo = Promotions.Promotions()
+            promo.answerQuestion(intention)
         elif (re.match(r"\baccount_\w+\b", intention)
               or re.match(r"\bcontact_\w+\b", intention)
               or re.match(r"\bgift_card_\w+\b", intention)):
