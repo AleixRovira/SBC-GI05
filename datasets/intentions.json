@@ -46,13 +46,13 @@
     "¿Mi pedido ya salió?"
   ],
   "devolucion_producto": [
-    "¿Cómo puedo devolver un producto?",
-    "Necesito devolver el casco",
-    "Quiero hacer una devolución porque no me queda",
-    "¿Puedo hacer devolución si está usado?",
-    "Quiero cambiar el mono por otra talla",
-    "¿Tienen política de devoluciones?",
-    "¿Puedo hacer devolución sin el ticket?"
+  "Necesito un reemplazo para mi casco",
+  "Quiero cambiar mis guantes por otros de otra marca",
+  "Busco una chaqueta parecida pero de otro color",
+  "¿Qué botas me recomiendas como reemplazo?",
+  "¿Tienen un casco similar pero más barato?",
+  "Quiero reemplazar mi airbag por uno de otra marca",
+  "¿Puedes ayudarme a encontrar un sustituto para mis pantalones?"
   ],
   "recomendar_talla": [
     "¿Qué talla debo elegir si mido 1.80?",
