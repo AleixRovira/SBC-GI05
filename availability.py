@@ -147,4 +147,5 @@ class Availability:
             response = random.choice(self.yes_responses).format(available_items=available_items)
             return response
         else:
-            return "Lo siento, no tenemos productos que cumplan esos criterios en este momento."
+            response = random.choice(self.no_responses)
+            return response
